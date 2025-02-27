@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio d'Ismaila Keita, développeur passionné et créatif."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preload" href="./IMG_8032.JPG" as="image" />
+    <title>Ismaila Keita - Portfolio</title>
+    <style>
+      .gradient-text {
+        background: linear-gradient(45deg, #f97316, #f59e0b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .progress-bar {
+        transition: width 1s ease-in-out;
+      }
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body
+    class="font-poppins bg-gray-50 text-gray-800 antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <!-- Preloader -->
+    <div
+      id="preloader"
+      class="fixed inset-0 bg-gray-900 flex items-center justify-center z-50"
+    >
+      <div
+        class="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"
+      ></div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="bg-white dark:bg-gray-800 shadow-lg fixed w-full z-50 border-b-4 border-orange-500"
+      aria-label="Navigation principale"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="logo text-2xl md:text-3xl font-bold gradient-text">
+          Ismaila Keita
+        </div>
+        <nav class="hidden md:block">
+          <ul class="flex space-x-8">
+            <li>
+              <a
+                href="#accueil"
+                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="#apropos"
+                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
+                >À propos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
+                >Expérience</a
+              >
+            </li>
+            <li>
+              <a
+                href="#competences"
+                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
+                >Compétences</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projets"
+                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
+                >Projets</a
+              >
+            </li>
+            <li>
+              <a
+                href="#temoignages"
+                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
+                >Témoignages</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            id="theme-toggle"
+            class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
+            aria-label="Basculer le thème"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button
+            class="md:hidden text-2xl text-gray-700 dark:text-gray-200"
+            id="menu-toggle"
+            aria-label="Ouvrir le menu mobile"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg"
+      >
+        <ul class="flex flex-col items-center py-4 space-y-4">
+          <li>
+            <a
+              href="#accueil"
+              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="#apropos"
+              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
+              >À propos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
+              >Expérience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#competences"
+              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
+              >Compétences</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projets"
+              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
+              >Projets</a
+            >
+          </li>
+          <li>
+            <a
+              href="#temoignages"
+              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
+              >Témoignages</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Accueil -->
+    <section
+      id="accueil"
+      class="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-100 to-orange-50 dark:from-gray-800 dark:to-gray-700 pt-20 overflow-hidden"
+    >
+      <div id="particles-js"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <img
+          src="./IMG_8032.JPG"
+          loading="lazy"
+          alt="Portrait d’Ismaila Keita, étudiant en génie informatique souriant"
+          class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 border-4 border-orange-500 shadow-lg"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        />
+        <h1
+          class="text-4xl md:text-6xl font-bold mb-4"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Salut, je suis <span class="gradient-text">Ismaila</span>
+        </h1>
+        <p
+          class="text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-2xl mx-auto mb-8"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="300"
+        >
+          Développeur passionné, créatif et toujours à la recherche de nouveaux
+          défis.
+        </p>
+        <button
+          class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-md flex items-center gap-2 mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="600"
+        >
+          <i class="fas fa-download"></i>
+          <a href="./Ismaila Keita.pdf" download="CV_Ismaila_Keita.pdf"
+            >Télécharger mon CV</a
+          >
+        </button>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          À propos de moi
+        </h2>
+        <div
+          class="max-w-4xl mx-auto bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-8"
+        >
+          <img
+            src="./IMG_8036.JPG"
+            loading="lazy"
+            alt="Photo de profil d’Ismaila Keita, développeur et étudiant en informatique"
+            class="w-40 h-40 md:w-52 md:h-52 rounded-full border-4 border-orange-200"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          />
+          <div class="text-center md:text-left">
+            <p
+              class="text-lg text-gray-700 dark:text-gray-200 mb-6"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
+              Je suis un étudiant en Génie Informatique, passionné par la
+              technologie et le développement de solutions innovantes. J'aime
+              résoudre des problèmes et travailler sur des projets créatifs.
+            </p>
+            <ul
+              class="text-lg text-gray-700 dark:text-gray-200 space-y-3"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="500"
+            >
+              <li>
+                <strong class="text-orange-500">Nom :</strong> Ismaila Keita
+              </li>
+              <li>
+                <strong class="text-orange-500">Université :</strong> Univers
+                Professionnelle
+              </li>
+              <li>
+                <strong class="text-orange-500">Localisation :</strong>
+                Rufisque, Dakar
+              </li>
+              <li>
+                <strong class="text-orange-500">Passions :</strong> Sport
+                (Football), Voyages
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expérience -->
+    <section id="experience" class="py-20 bg-gray-100 dark:bg-gray-900">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Expérience
+        </h2>
+        <div class="max-w-3xl mx-auto relative">
+          <!-- Ligne centrale de la timeline -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-orange-500 dark:bg-orange-400 opacity-50 hidden md:block"
+          ></div>
+
+          <!-- Expérience 1 : Consultation Médicale -->
+          <div
+            class="mb-12 flex flex-col md:flex-row items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <div class="md:w-1/2 md:order-2 text-left">
+              <h3
+                class="text-xl font-semibold text-gray-800 dark:text-gray-100"
+              >
+                Projet Académique - Consultation Médicale
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                20 Février 2025 - 05 Mars 2025
+              </p>
+              <p class="text-gray-700 dark:text-gray-200 mt-2">
+                Conception et mise en place d’une application web de prise de
+                rendez-vous pour consultations médicales, développée dans le
+                cadre d’un projet universitaire.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-700 dark:text-gray-200 mt-2 text-sm"
+              >
+                <li>
+                  Utilisation de HTML, CSS et JavaScript pour l’interface
+                  utilisateur.
+                </li>
+                <li>
+                  Intégration d’une base de données pour gérer les rendez-vous.
+                </li>
+                <li>
+                  Test et validation des fonctionnalités avec des utilisateurs
+                  fictifs.
+                </li>
+              </ul>
+            </div>
+            <div class="md:w-1/2 md:order-1 flex justify-center md:justify-end">
+              <div
+                class="w-4 h-4 bg-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block"
+              ></div>
+              <img
+                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                loading="lazy"
+                alt="Aperçu de l’application web de prise de rendez-vous médicaux"
+                class="w-24 h-24 rounded-full border-2 border-orange-500 shadow-md"
+              />
+            </div>
+          </div>
+
+          <!-- Expérience 2 : Gestion de Bibliothèque -->
+          <div
+            class="mb-12 flex flex-col md:flex-row-reverse items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
+            <div class="md:w-1/2 md:order-1 text-left">
+              <h3
+                class="text-xl font-semibold text-gray-800 dark:text-gray-100"
+              >
+                Projet Académique - Gestion de Bibliothèque
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                25 Janvier 2025 - 24 Février 2025
+              </p>
+              <p class="text-gray-700 dark:text-gray-200 mt-2">
+                Développement d’un système de gestion de bibliothèque en Java
+                pour un projet universitaire, permettant le suivi des livres et
+                des emprunts.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-700 dark:text-gray-200 mt-2 text-sm"
+              >
+                <li>
+                  Programmation orientée objet en Java pour la logique métier.
+                </li>
+                <li>
+                  Utilisation d’une base de données SQLite pour stocker les
+                  informations.
+                </li>
+                <li>
+                  Interface console simple pour tester les fonctionnalités.
+                </li>
+              </ul>
+            </div>
+            <div
+              class="md:w-1/2 md:order-2 flex justify-center md:justify-start"
+            >
+              <div
+                class="w-4 h-4 bg-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block"
+              ></div>
+              <img
+                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                loading="lazy"
+                alt="Vue d’une bibliothèque avec des étagères remplies de livres"
+                class="w-24 h-24 rounded-full border-2 border-orange-500 shadow-md"
+              />
+            </div>
+          </div>
+
+          <!-- Expérience 3 : Stage chez TGI -->
+          <div
+            class="mb-12 flex flex-col md:flex-row items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="400"
+          >
+            <div class="md:w-1/2 md:order-2 text-left">
+              <h3
+                class="text-xl font-semibold text-gray-800 dark:text-gray-100"
+              >
+                Stage - TGI
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Juin 2024 - Août 2024
+              </p>
+              <p class="text-gray-700 dark:text-gray-200 mt-2">
+                Stage chez TGI (Technologies et Gestion Informatique) pour
+                assister dans le développement et la maintenance de solutions
+                informatiques pour l’entreprise.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-700 dark:text-gray-200 mt-2 text-sm"
+              >
+                <li>Participation à la maintenance de sites web internes.</li>
+                <li>
+                  Support technique et résolution de bugs dans des applications
+                  existantes.
+                </li>
+                <li>
+                  Collaboration avec l’équipe pour tester et déployer des mises
+                  à jour.
+                </li>
+              </ul>
+            </div>
+            <div class="md:w-1/2 md:order-1 flex justify-center md:justify-end">
+              <div
+                class="w-4 h-4 bg-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block"
+              ></div>
+              <img
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                loading="lazy"
+                alt="Environnement de travail informatique chez TGI"
+                class="w-24 h-24 rounded-full border-2 border-orange-500 shadow-md"
+              />
+            </div>
+          </div>
+
+          <!-- Expérience 4 : Début en Informatique -->
+          <div
+            class="mb-12 flex flex-col md:flex-row-reverse items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="600"
+          >
+            <div class="md:w-1/2 md:order-1 text-left">
+              <h3
+                class="text-xl font-semibold text-gray-800 dark:text-gray-100"
+              >
+                Début en Informatique
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">Été 2023</p>
+              <p class="text-gray-700 dark:text-gray-200 mt-2">
+                Création de sites web simples avec HTML et CSS dans le cadre de
+                mes débuts en informatique à l’Université Professionnelle.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-700 dark:text-gray-200 mt-2 text-sm"
+              >
+                <li>
+                  Développement de pages statiques pour des projets personnels.
+                </li>
+                <li>
+                  Apprentissage des bases du design web et de la mise en page.
+                </li>
+                <li>
+                  Première expérience pratique avec la résolution de problèmes
+                  techniques.
+                </li>
+              </ul>
+            </div>
+            <div
+              class="md:w-1/2 md:order-2 flex justify-center md:justify-start"
+            >
+              <div
+                class="w-4 h-4 bg-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block"
+              ></div>
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                loading="lazy"
+                alt="Exemple de site web simple créé avec HTML et CSS"
+                class="w-24 h-24 rounded-full border-2 border-orange-500 shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Mes Compétences
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <div class="flex justify-center space-x-4 mb-4">
+              <i class="fab fa-html5 text-4xl text-orange-600"></i>
+              <i class="fab fa-css3-alt text-4xl text-blue-600"></i>
+              <i class="fab fa-js text-4xl text-yellow-500"></i>
+              <i class="fab fa-react text-4xl text-cyan-500"></i>
+              <i class="fab fa-bootstrap text-4xl text-purple-600"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold mb-3 text-center text-gray-800 dark:text-gray-100"
+            >
+              Développement Web
+            </h3>
+            <div
+              class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mb-3"
+            >
+              <div
+                class="bg-orange-500 h-2.5 rounded-full progress-bar"
+                style="width: 0"
+                data-width="80%"
+              ></div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-200 text-center">
+              HTML, CSS, JavaScript, React, Bootstrap
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <div class="flex justify-center space-x-4 mb-4">
+              <i class="fab fa-python text-4xl text-blue-700"></i>
+              <i class="fab fa-java text-4xl text-orange-700"></i>
+              <i class="fab fa-php text-4xl text-indigo-600"></i>
+              <i class="fab fa-ruby text-4xl text-red-600"></i>
+              <i class="fas fa-code text-4xl text-gray-600"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold mb-3 text-center text-gray-800 dark:text-gray-100"
+            >
+              Langages
+            </h3>
+            <div
+              class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mb-3"
+            >
+              <div
+                class="bg-orange-500 h-2.5 rounded-full progress-bar"
+                style="width: 0"
+                data-width="70%"
+              ></div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-200 text-center">
+              Python, Java, PHP, Ruby, C/C++
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="700"
+          >
+            <div class="flex justify-center space-x-4 mb-4">
+              <i class="fas fa-database text-4xl text-teal-600"></i>
+              <i class="fas fa-server text-4xl text-gray-600"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold mb-3 text-center text-gray-800 dark:text-gray-100"
+            >
+              Bases de Données
+            </h3>
+            <div
+              class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mb-3"
+            >
+              <div
+                class="bg-orange-500 h-2.5 rounded-full progress-bar"
+                style="width: 0"
+                data-width="60%"
+              ></div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-200 text-center">
+              MySQL, MongoDB, PostgreSQL, SQLite
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="900"
+          >
+            <div class="flex justify-center space-x-4 mb-4">
+              <i class="fab fa-figma text-4xl text-orange-500"></i>
+              <i class="fab fa-adobe text-4xl text-red-600"></i>
+              <i class="fab fa-sketch text-4xl text-yellow-600"></i>
+              <i class="fab fa-invision text-4xl text-pink-600"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold mb-3 text-center text-gray-800 dark:text-gray-100"
+            >
+              Web Design
+            </h3>
+            <div
+              class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mb-3"
+            >
+              <div
+                class="bg-orange-500 h-2.5 rounded-full progress-bar"
+                style="width: 0"
+                data-width="75%"
+              ></div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-200 text-center">
+              Figma, Adobe XD, Sketch, InVision
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="py-20 bg-gray-100 dark:bg-gray-900">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Mes Projets
+        </h2>
+        <div class="flex justify-center gap-4 mb-8 flex-wrap">
+          <button
+            class="filter-btn bg-orange-500 text-white px-4 py-2 rounded-full"
+            data-filter="all"
+          >
+            Tous
+          </button>
+          <button
+            class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
+            data-filter="web"
+          >
+            Web
+          </button>
+          <button
+            class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
+            data-filter="data"
+          >
+            Data
+          </button>
+          <button
+            class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
+            data-filter="modelisation"
+          >
+            Modélisation
+          </button>
+          <button
+            class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
+            data-filter="portfolio"
+          >
+            Portfolio
+          </button>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 projets"
+        >
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 data"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+              loading="lazy"
+              alt="Capture d’écran du projet de recensement de la population sénégalaise avec MySQL"
+              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
+              data-aos="zoom-in"
+            />
+            <h3
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
+            >
+              Recensement
+            </h3>
+            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
+              Gestion des données de recensement avec MySQL.
+            </p>
+            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
+              Ce projet consiste en une base de données pour le recensement de
+              la population sénégalaise...
+            </p>
+            <button
+              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+            >
+              Voir plus
+            </button>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 modelisation"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+              loading="lazy"
+              alt="Diagramme UML du système de stationnement intelligent"
+              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
+              data-aos="zoom-in"
+            />
+            <h3
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
+            >
+              Stationnement
+            </h3>
+            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
+              Modélisation UML d’un système de stationnement.
+            </p>
+            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
+              Ce projet implique la modélisation UML d’un système de
+              stationnement intelligent...
+            </p>
+            <button
+              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+            >
+              Voir plus
+            </button>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 web"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="700"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+              loading="lazy"
+              alt="Interface de l’application web de calculatrice en JavaScript"
+              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
+              data-aos="zoom-in"
+            />
+            <h3
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
+            >
+              Calculatrice JS
+            </h3>
+            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
+              Application de calculs mathématiques en JavaScript.
+            </p>
+            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
+              Cette application web permet aux utilisateurs de réaliser des
+              calculs mathématiques complexes...
+            </p>
+            <button
+              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+            >
+              Voir plus
+            </button>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 data"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="900"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+              loading="lazy"
+              alt="Interface de gestion des véhicules développée en Java"
+              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
+              data-aos="zoom-in"
+            />
+            <h3
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
+            >
+              Gestion Véhicules
+            </h3>
+            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
+              Application Java pour gérer des véhicules.
+            </p>
+            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
+              Ce projet est une application Java conçue pour gérer les
+              informations des véhicules...
+            </p>
+            <button
+              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+            >
+              Voir plus
+            </button>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 portfolio web"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="1100"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+              loading="lazy"
+              alt="Première version du portfolio personnel avec animations AOS"
+              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
+              data-aos="zoom-in"
+            />
+            <h3
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
+            >
+              Portfolio Initial
+            </h3>
+            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
+              Création d’un portfolio personnel avec HTML/CSS.
+            </p>
+            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
+              Collaboration pour concevoir une première version de portfolio
+              avec HTML, CSS et AOS...
+            </p>
+            <button
+              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+            >
+              Voir plus
+            </button>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 portfolio web"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="1300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+              loading="lazy"
+              alt="Portfolio amélioré avec Tailwind CSS et mode sombre"
+              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
+              data-aos="zoom-in"
+            />
+            <h3
+              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
+            >
+              Portfolio Tailwind
+            </h3>
+            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
+              Portfolio amélioré avec Tailwind CSS.
+            </p>
+            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
+              Refonte du portfolio avec Tailwind CSS, ajout de filtres et mode
+              sombre...
+            </p>
+            <button
+              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+            >
+              Voir plus
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="temoignages" class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Témoignages
+        </h2>
+        <div class="relative">
+          <button
+            class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full z-10 hover:bg-orange-600"
+            aria-label="Témoignage précédent"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div
+            class="carousel flex overflow-x-auto snap-x snap-mandatory gap-6"
+          >
+            <div
+              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
+              <p class="text-gray-700 dark:text-gray-200">
+                "Ismaila a livré un travail exceptionnel sur notre projet."
+              </p>
+              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
+                - Joseph Mbaye
+              </p>
+            </div>
+            <div
+              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="400"
+            >
+              <p class="text-gray-700 dark:text-gray-200">
+                "Un développeur créatif et rigoureux."
+              </p>
+              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
+                - Mouhamed Sagna
+              </p>
+            </div>
+            <div
+              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="500"
+            >
+              <p class="text-gray-700 dark:text-gray-200">
+                "Son portfolio est impressionnant et bien conçu."
+              </p>
+              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
+                - Professeur Diop
+              </p>
+            </div>
+            <div
+              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="600"
+            >
+              <p class="text-gray-700 dark:text-gray-200">
+                "Toujours prêt à relever des défis techniques."
+              </p>
+              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
+                - Partenaire Cheikhouna
+              </p>
+            </div>
+            <div
+              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="700"
+            >
+              <p class="text-gray-700 dark:text-gray-200">
+                "Une collaboration fluide et productive."
+              </p>
+              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
+                - Coura Diop
+              </p>
+            </div>
+            <div
+              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="800"
+            >
+              <p class="text-gray-700 dark:text-gray-200">
+                "Compétences variées et approche innovante."
+              </p>
+              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
+                - Astou Louise Seck
+              </p>
+            </div>
+            <div
+              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="900"
+            >
+              <p class="text-gray-700 dark:text-gray-200">
+                "Un talent prometteur en développement."
+              </p>
+              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
+                - Professeur Soumare
+              </p>
+            </div>
+          </div>
+          <button
+            class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full z-10 hover:bg-orange-600"
+            aria-label="Témoignage suivant"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-900">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Me Contacter
+        </h2>
+        <form
+          id="contact-form"
+          class="max-w-lg mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="300"
+        >
+          <div class="mb-6">
+            <label
+              for="nom"
+              class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
+              >Nom :</label
+            >
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              required
+              placeholder="Votre nom"
+              class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors dark:bg-gray-700 dark:text-gray-200"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="email"
+              class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
+              >Email :</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Votre email"
+              class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors dark:bg-gray-700 dark:text-gray-200"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="message"
+              class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
+              >Message :</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Votre message"
+              class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors h-32 resize-none dark:bg-gray-700 dark:text-gray-200"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2"
+          >
+            <i class="fas fa-paper-plane"></i> Envoyer
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-12 text-center"
+    >
+      <div class="container mx-auto px-6">
+        <div
+          class="flex justify-center space-x-8 mb-6"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="500"
+        >
+          <a
+            href="https://github.com/Ismaizo21"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-3xl hover:text-gray-200 transition-colors"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ismaila-keita-b0405525a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-3xl hover:text-gray-200 transition-colors"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/__izo_k__"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-3xl hover:text-gray-200 transition-colors"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://x.com/izo_keita"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-3xl hover:text-gray-200 transition-colors"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+        <p class="text-sm">© 2025 Ismaila Keita. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      AOS.init({ once: true, offset: 100 });
+
+      window.addEventListener("load", () => {
+        document.getElementById("preloader").classList.add("hidden");
+      });
+
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 50 },
+          color: { value: "#f97316" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3 },
+          move: { speed: 2 },
+        },
+        interactivity: {
+          events: { onhover: { enable: true, mode: "repulse" } },
+        },
+      });
+
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          document.body.classList.contains("dark") ? "dark" : "light"
+        );
+        themeToggle.querySelector("i").classList.toggle("fa-moon");
+        themeToggle.querySelector("i").classList.toggle("fa-sun");
+      });
+      if (localStorage.getItem("theme") === "dark")
+        document.body.classList.add("dark");
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll(".progress-bar").forEach((bar) => {
+        const width = bar.getAttribute("data-width");
+        setTimeout(() => (bar.style.width = width), 500);
+      });
+
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const projects = document.querySelectorAll(".projets > div");
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.getAttribute("data-filter");
+          filterButtons.forEach((b) =>
+            b.classList.replace("bg-orange-500", "bg-gray-200")
+          );
+          btn.classList.replace("bg-gray-200", "bg-orange-500");
+          projects.forEach((project) => {
+            project.classList.toggle(
+              "hidden",
+              filter !== "all" && !project.classList.contains(filter)
+            );
+          });
+        });
+      });
+
+      document.querySelectorAll(".voir-plus").forEach((button) => {
+        button.addEventListener("click", () => {
+          const fullDesc = button.previousElementSibling;
+          fullDesc.classList.toggle("hidden");
+          button.textContent = fullDesc.classList.contains("hidden")
+            ? "Voir plus"
+            : "Voir moins";
+        });
+      });
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Merci pour votre message ! Je vous répondrai bientôt.");
+          e.target.reset();
+        });
+      const formInputs = document.querySelectorAll(
+        "#contact-form input, #contact-form textarea"
+      );
+      formInputs.forEach((input) => {
+        input.addEventListener("input", () => {
+          input.classList.toggle("border-green-500", input.checkValidity());
+          input.classList.toggle("border-red-500", !input.checkValidity());
+        });
+      });
+
+      const carousel = document.querySelector(".carousel");
+      const prevBtn = document.querySelector(".carousel-prev");
+      const nextBtn = document.querySelector(".carousel-next");
+      prevBtn.addEventListener("click", () =>
+        carousel.scrollBy({ left: -carousel.offsetWidth, behavior: "smooth" })
+      );
+      nextBtn.addEventListener("click", () =>
+        carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" })
+      );
+    </script>
+  </body>
+</html>
