@@ -1,0 +1,11 @@
+{
+  "contact": {
+    "title": "Me Contacter",
+    "name": "Nom :",
+    "email": "Email :",
+    "message": "Message :",
+    "send": "Envoyer",
+    "success": "Message envoyé avec succès !",
+    "error": "Erreur lors de l'envoi. Réessayez."
+  }
+}

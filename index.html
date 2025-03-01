@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!-- Configuration de base du document HTML -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Portfolio d'Ismaila Keita, développeur passionné et créatif."
     />
+
+    <!-- Balises Open Graph pour le SEO, permettant un meilleur partage sur les réseaux sociaux -->
+    <meta property="og:title" content="Ismaila Keita - Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio d'Ismaila Keita, développeur passionné et créatif."
+    />
+    <meta property="og:image" content="./public/IMG_8032.JPG" />
+    <meta
+      property="og:url"
+      content="https://portfolio-ismaila-keita.netlify.app/"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Intégration de Google Analytics pour le suivi des visites -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-347673295"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-347673295"); // ID Google Analytics (à vérifier si tu as un autre ID)
+    </script>
+
+    <!-- Chargement des bibliothèques externes pour les styles et les icônes -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -17,31 +47,79 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="preload" href="./IMG_8032.JPG" as="image" />
+    <link rel="icon" type="image/png" href="./public/favicon.png" />
+    <link rel="preload" href="./public/IMG_8032.JPG" as="image" />
+
+    <!-- Intégration de i18next pour la gestion multilingue -->
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+    <script
+      src="./public/locales/fr/translation.json"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./public/locales/en/translation.json"
+      type="text/javascript"
+    ></script>
+
     <title>Ismaila Keita - Portfolio</title>
+
+    <!-- Styles personnalisés avec commentaires pour chaque classe -->
     <style>
+      /* Texte avec dégradé pour les titres en relief visuel */
       .gradient-text {
         background: linear-gradient(45deg, #f97316, #f59e0b);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
       }
+
+      /* Animation progressive pour les barres de progression des compétences */
       .progress-bar {
         transition: width 1s ease-in-out;
       }
+
+      /* Positionnement des particules d'arrière-plan pour l'effet visuel */
       #particles-js {
         position: absolute;
         width: 100%;
         height: 100%;
         z-index: 0;
       }
+
+      /* Styles pour la navigation accessible via clavier */
+      a:focus,
+      button:focus {
+        outline: 2px solid #f97316;
+        outline-offset: 2px;
+      }
+
+      /* Classe pour rendre un élément visible uniquement pour les lecteurs d’écran */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      /* Animation pour le menu mobile */
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+      }
+      #mobile-menu:not(.hidden) {
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body
     class="font-poppins bg-gray-50 text-gray-800 antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
   >
-    <!-- Preloader -->
+    <!-- Preloader : Animation de chargement initiale avant que le contenu ne soit visible -->
     <div
       id="preloader"
       class="fixed inset-0 bg-gray-900 flex items-center justify-center z-50"
@@ -51,7 +129,7 @@
       ></div>
     </div>
 
-    <!-- Header -->
+    <!-- Header : Barre de navigation fixe en haut de la page -->
     <header
       class="bg-white dark:bg-gray-800 shadow-lg fixed w-full z-50 border-b-4 border-orange-500"
       aria-label="Navigation principale"
@@ -116,13 +194,15 @@
           </ul>
         </nav>
         <div class="flex items-center gap-4">
+          <!-- Bouton pour basculer entre mode clair et sombre -->
           <button
             id="theme-toggle"
-            class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
+            class="p-2 rounded-full bg-gray-200 text-gray-700 hover:bg-orange-500 hover:text-white transition-colors duration-300"
             aria-label="Basculer le thème"
           >
             <i class="fas fa-moon"></i>
           </button>
+          <!-- Bouton pour ouvrir le menu mobile sur petits écrans -->
           <button
             class="md:hidden text-2xl text-gray-700 dark:text-gray-200"
             id="menu-toggle"
@@ -190,15 +270,16 @@
       </div>
     </header>
 
-    <!-- Accueil -->
+    <!-- Section d'accueil avec effet de particules et animation -->
     <section
       id="accueil"
       class="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-100 to-orange-50 dark:from-gray-800 dark:to-gray-700 pt-20 overflow-hidden"
     >
+      <h1 class="sr-only">Portfolio d'Ismaila Keita</h1>
       <div id="particles-js"></div>
       <div class="container mx-auto px-6 relative z-10">
         <img
-          src="./IMG_8032.JPG"
+          src="./public/IMG_8032.JPG"
           loading="lazy"
           alt="Portrait d’Ismaila Keita, étudiant en génie informatique souriant"
           class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 border-4 border-orange-500 shadow-lg"
@@ -228,14 +309,14 @@
           data-aos-delay="600"
         >
           <i class="fas fa-download"></i>
-          <a href="./Ismaila Keita.pdf" download="CV_Ismaila_Keita.pdf"
+          <a href="./public/Ismaila Keita.pdf" download="CV_Ismaila_Keita.pdf"
             >Télécharger mon CV</a
           >
         </button>
       </div>
     </section>
 
-    <!-- À propos -->
+    <!-- Section À propos avec informations personnelles et animation -->
     <section id="apropos" class="py-20 bg-white dark:bg-gray-800">
       <div class="container mx-auto px-6">
         <h2
@@ -249,7 +330,7 @@
           class="max-w-4xl mx-auto bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-8"
         >
           <img
-            src="./IMG_8036.JPG"
+            src="./public/IMG_8036.JPG"
             loading="lazy"
             alt="Photo de profil d’Ismaila Keita, développeur et étudiant en informatique"
             class="w-40 h-40 md:w-52 md:h-52 rounded-full border-4 border-orange-200"
@@ -295,7 +376,7 @@
       </div>
     </section>
 
-    <!-- Expérience -->
+    <!-- Section Expérience avec une timeline et animations -->
     <section id="experience" class="py-20 bg-gray-100 dark:bg-gray-900">
       <div class="container mx-auto px-6">
         <h2
@@ -306,12 +387,10 @@
           Expérience
         </h2>
         <div class="max-w-3xl mx-auto relative">
-          <!-- Ligne centrale de la timeline -->
           <div
             class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-orange-500 dark:bg-orange-400 opacity-50 hidden md:block"
           ></div>
 
-          <!-- Expérience 1 : Consultation Médicale -->
           <div
             class="mb-12 flex flex-col md:flex-row items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
             data-aos="fade-up"
@@ -360,7 +439,6 @@
             </div>
           </div>
 
-          <!-- Expérience 2 : Gestion de Bibliothèque -->
           <div
             class="mb-12 flex flex-col md:flex-row-reverse items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
             data-aos="fade-up"
@@ -411,7 +489,6 @@
             </div>
           </div>
 
-          <!-- Expérience 3 : Stage chez TGI -->
           <div
             class="mb-12 flex flex-col md:flex-row items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
             data-aos="fade-up"
@@ -459,7 +536,6 @@
             </div>
           </div>
 
-          <!-- Expérience 4 : Début en Informatique -->
           <div
             class="mb-12 flex flex-col md:flex-row-reverse items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
             data-aos="fade-up"
@@ -510,7 +586,7 @@
       </div>
     </section>
 
-    <!-- Compétences -->
+    <!-- Section Compétences avec barres de progression animées -->
     <section id="competences" class="py-20 bg-white dark:bg-gray-800">
       <div class="container mx-auto px-6">
         <h2
@@ -645,7 +721,7 @@
       </div>
     </section>
 
-    <!-- Projets -->
+    <!-- Section Projets avec filtre et animations -->
     <section id="projets" class="py-20 bg-gray-100 dark:bg-gray-900">
       <div class="container mx-auto px-6">
         <h2
@@ -880,7 +956,7 @@
       </div>
     </section>
 
-    <!-- Témoignages -->
+    <!-- Section Témoignages avec carrousel manuel et animations -->
     <section id="temoignages" class="py-20 bg-white dark:bg-gray-800">
       <div class="container mx-auto px-6">
         <h2
@@ -1002,7 +1078,7 @@
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Section Contact avec formulaire multilingue et gestion des erreurs -->
     <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-900">
       <div class="container mx-auto px-6">
         <h2
@@ -1010,8 +1086,18 @@
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          Me Contacter
+          <span id="titre-contact"></span>
+          <!-- Titre traduit dynamiquement -->
         </h2>
+        <div class="text-center mb-6">
+          <!-- Bouton pour basculer entre français et anglais -->
+          <button
+            id="lang-toggle"
+            class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+          >
+            Français / English
+          </button>
+        </div>
         <form
           id="contact-form"
           class="max-w-lg mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg"
@@ -1023,14 +1109,23 @@
             <label
               for="nom"
               class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
-              >Nom :</label
+              id="label-nom"
+              <!--
+              Label
+              pour
+              le
+              champ
+              Nom
+              --
+            >
+              ></label
             >
             <input
               type="text"
               id="nom"
               name="nom"
               required
-              placeholder="Votre nom"
+              placeholder="Votre nom / Your name"
               class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors dark:bg-gray-700 dark:text-gray-200"
             />
           </div>
@@ -1038,14 +1133,23 @@
             <label
               for="email"
               class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
-              >Email :</label
+              id="label-email"
+              <!--
+              Label
+              pour
+              le
+              champ
+              Email
+              --
+            >
+              ></label
             >
             <input
               type="email"
               id="email"
               name="email"
               required
-              placeholder="Votre email"
+              placeholder="Votre email / Your email"
               class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors dark:bg-gray-700 dark:text-gray-200"
             />
           </div>
@@ -1053,13 +1157,22 @@
             <label
               for="message"
               class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
-              >Message :</label
+              id="label-message"
+              <!--
+              Label
+              pour
+              le
+              champ
+              Message
+              --
+            >
+              ></label
             >
             <textarea
               id="message"
               name="message"
               required
-              placeholder="Votre message"
+              placeholder="Votre message / Your message"
               class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors h-32 resize-none dark:bg-gray-700 dark:text-gray-200"
             ></textarea>
           </div>
@@ -1067,13 +1180,17 @@
             type="submit"
             class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2"
           >
-            <i class="fas fa-paper-plane"></i> Envoyer
+            <i class="fas fa-paper-plane"></i>
+            <span id="bouton-envoyer"></span>
+            <!-- Texte du bouton traduit dynamiquement -->
           </button>
+          <p id="form-status" class="text-center mt-4 hidden"></p>
+          <!-- Message de statut (succès/erreur) -->
         </form>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer avec liens vers les réseaux sociaux -->
     <footer
       class="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-12 text-center"
     >
@@ -1117,108 +1234,279 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts externes pour les animations, particules, et fonctionnalités -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-      AOS.init({ once: true, offset: 100 });
+      // Initialisation d'EmailJS avec ton User ID
+      (function () {
+        emailjs.init("vumHFWqyw0SWXaPKP"); // Remplace par ton User ID EmailJS si nécessaire
+      })();
 
+      // Initialisation des animations AOS (Animate On Scroll)
+      AOS.init({ once: true, offset: 100 }); // Les animations n'apparaissent qu'une fois et décallées pour un effet fluide
+
+      // Initialisation de i18next pour la gestion multilingue
+      i18next.use(i18nextBrowserLanguageDetector).init(
+        {
+          fallbackLng: "fr", // Langue par défaut si aucune n'est détectée
+          resources: {
+            fr: { translation: window.frTranslation }, // Traductions françaises chargées depuis le fichier JSON
+            en: { translation: window.enTranslation }, // Traductions anglaises chargées depuis le fichier JSON
+          },
+        },
+        (err) => {
+          if (err)
+            console.error("Erreur lors de l'initialisation d'i18next:", err);
+          updateTranslations(); // Applique les traductions après initialisation
+        }
+      );
+
+      // Fonction pour mettre à jour les textes traduits dans le DOM
+      function updateTranslations() {
+        const elements = {
+          "titre-contact": "Titre", // Titre de la section Contact
+          "label-nom": "Nom", // Label pour le champ Nom
+          "label-email": "Email", // Label pour le champ Email
+          "label-message": "Message", // Label pour le champ Message
+          "bouton-envoyer": "Envoyer", // Texte du bouton d'envoi
+        };
+        Object.keys(elements).forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = i18next.t(elements[id]); // Applique la traduction si l'élément existe
+        });
+
+        // Met à jour le message de statut du formulaire si visible
+        const formStatus = document.getElementById("form-status");
+        if (formStatus && !formStatus.classList.contains("hidden")) {
+          formStatus.textContent = i18next.t(
+            formStatus.classList.contains("text-green-500")
+              ? "Succes"
+              : "Erreur"
+          );
+        }
+      }
+
+      // Gestion de la bascule entre français et anglais
+      const langToggle = document.getElementById("lang-toggle");
+      if (langToggle) {
+        langToggle.addEventListener("click", () => {
+          const newLang = i18next.language === "fr" ? "en" : "fr"; // Bascule entre "fr" et "en"
+          i18next.changeLanguage(newLang, () => updateTranslations()); // Met à jour les traductions
+          localStorage.setItem("lang", newLang); // Sauvegarde la préférence de langue
+        });
+      }
+
+      // Gestion du chargement initial et du mode sombre
       window.addEventListener("load", () => {
-        document.getElementById("preloader").classList.add("hidden");
+        const preloader = document.getElementById("preloader"); // Élément de préchargement
+        if (preloader) preloader.classList.add("hidden"); // Cache le préloader une fois la page chargée
+
+        // Gestion du mode sombre avec détection automatique
+        const savedTheme = localStorage.getItem("theme"); // Récupère le thème sauvegardé
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches; // Préfère le mode sombre par défaut
+        const themeToggle = document.getElementById("theme-toggle"); // Bouton de bascule de thème
+        const themeIcon = themeToggle?.querySelector("i"); // Icône du bouton (lune/soleil)
+
+        // Applique le mode sombre si l'utilisateur préfère ou si sauvegardé
+        if (!savedTheme && prefersDark) {
+          document.documentElement.classList.add("dark"); // Active le mode sombre
+          if (themeToggle) {
+            themeToggle.classList.remove("bg-gray-200", "text-gray-700"); // Supprime les styles clairs
+            themeToggle.classList.add("bg-gray-700", "text-gray-200"); // Ajoute les styles sombres
+            if (themeIcon) {
+              themeIcon.classList.remove("fa-moon"); // Change l'icône en soleil
+              themeIcon.classList.add("fa-sun");
+            }
+          }
+        } else if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark"); // Active le mode sombre si sauvegardé
+          if (themeToggle) {
+            themeToggle.classList.remove("bg-gray-200", "text-gray-700");
+            themeToggle.classList.add("bg-gray-700", "text-gray-200");
+            if (themeIcon) {
+              themeIcon.classList.remove("fa-moon");
+              themeIcon.classList.add("fa-sun");
+            }
+          }
+        }
+
+        // Gestion du clic sur le bouton de thème
+        if (themeToggle) {
+          themeToggle.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark"); // Bascule le mode sombre/clair
+            const isDark = document.documentElement.classList.contains("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light"); // Sauvegarde le thème
+            themeToggle.classList.toggle("bg-gray-200", !isDark); // Styles clairs si mode clair
+            themeToggle.classList.toggle("text-gray-700", !isDark);
+            themeToggle.classList.toggle("bg-gray-700", isDark); // Styles sombres si mode sombre
+            themeToggle.classList.toggle("text-gray-200", isDark);
+            if (themeIcon) {
+              themeIcon.classList.toggle("fa-moon", !isDark); // Icône lune pour mode clair
+              themeIcon.classList.toggle("fa-sun", isDark); // Icône soleil pour mode sombre
+            }
+          });
+        }
       });
 
+      // Initialisation des particules d'arrière-plan pour l'effet visuel
       particlesJS("particles-js", {
         particles: {
-          number: { value: 50 },
-          color: { value: "#f97316" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5 },
-          size: { value: 3 },
-          move: { speed: 2 },
+          number: { value: 50 }, // Nombre de particules
+          color: { value: "#f97316" }, // Couleur orange des particules
+          shape: { type: "circle" }, // Forme des particules
+          opacity: { value: 0.5 }, // Opacité des particules
+          size: { value: 3 }, // Taille des particules
+          move: { speed: 2 }, // Vitesse de mouvement
         },
         interactivity: {
-          events: { onhover: { enable: true, mode: "repulse" } },
+          events: { onhover: { enable: true, mode: "repulse" } }, // Repousse les particules au survol
         },
       });
 
-      const themeToggle = document.getElementById("theme-toggle");
-      themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-        localStorage.setItem(
-          "theme",
-          document.body.classList.contains("dark") ? "dark" : "light"
-        );
-        themeToggle.querySelector("i").classList.toggle("fa-moon");
-        themeToggle.querySelector("i").classList.toggle("fa-sun");
-      });
-      if (localStorage.getItem("theme") === "dark")
-        document.body.classList.add("dark");
-
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      document.querySelectorAll(".progress-bar").forEach((bar) => {
-        const width = bar.getAttribute("data-width");
-        setTimeout(() => (bar.style.width = width), 500);
-      });
-
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const projects = document.querySelectorAll(".projets > div");
-      filterButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const filter = btn.getAttribute("data-filter");
-          filterButtons.forEach((b) =>
-            b.classList.replace("bg-orange-500", "bg-gray-200")
+      // Gestion du menu mobile
+      const menuToggle = document.getElementById("menu-toggle"); // Bouton pour ouvrir/fermer le menu
+      const mobileMenu = document.getElementById("mobile-menu"); // Menu mobile
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden"); // Affiche/cache le menu
+        });
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+          link.addEventListener("click", () =>
+            // Ferme le menu mobile après un clic sur un lien
+            mobileMenu.classList.add("hidden")
           );
-          btn.classList.replace("bg-gray-200", "bg-orange-500");
-          projects.forEach((project) => {
-            project.classList.toggle(
-              "hidden",
-              filter !== "all" && !project.classList.contains(filter)
+        });
+      }
+
+      // Animation des barres de progression des compétences au scroll
+      const progressBars = document.querySelectorAll(".progress-bar");
+      if (progressBars.length) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                progressBars.forEach((bar) => {
+                  bar.style.width = bar.getAttribute("data-width"); // Anime la largeur des barres
+                });
+                observer.disconnect(); // Arrête l'observation une fois l'animation déclenchée
+              }
+            });
+          },
+          { threshold: 0.5 } // Déclenche quand 50% de la section est visible
+        );
+        observer.observe(document.getElementById("competences"));
+      }
+
+      // Gestion des filtres pour les projets
+      const filterButtons = document.querySelectorAll(".filter-btn"); // Boutons de filtre
+      const projects = document.querySelectorAll(".projets > div"); // Projets à filtrer
+      if (filterButtons.length && projects.length) {
+        filterButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const filter = btn.getAttribute("data-filter"); // Récupère le filtre sélectionné
+            filterButtons.forEach(
+              (b) => b.classList.replace("bg-orange-500", "bg-gray-200") // Réinitialise les styles des boutons
             );
+            btn.classList.replace("bg-gray-200", "bg-orange-500"); // Met en surbrillance le bouton actif
+            projects.forEach((project) => {
+              project.classList.toggle(
+                "hidden",
+                filter !== "all" && !project.classList.contains(filter) // Affiche/masque les projets selon le filtre
+              );
+            });
           });
         });
-      });
+      }
 
-      document.querySelectorAll(".voir-plus").forEach((button) => {
-        button.addEventListener("click", () => {
-          const fullDesc = button.previousElementSibling;
-          fullDesc.classList.toggle("hidden");
-          button.textContent = fullDesc.classList.contains("hidden")
-            ? "Voir plus"
-            : "Voir moins";
+      // Gestion des boutons "Voir plus" pour les descriptions des projets
+      const voirPlusButtons = document.querySelectorAll(".voir-plus");
+      if (voirPlusButtons.length) {
+        voirPlusButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const fullDesc = button.previousElementSibling; // Récupère la description complète
+            if (fullDesc) {
+              fullDesc.classList.toggle("hidden"); // Affiche/cache la description complète
+              button.textContent = fullDesc.classList.contains("hidden")
+                ? "Voir plus"
+                : "Voir moins"; // Change le texte du bouton
+            }
+          });
         });
-      });
+      }
 
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", (e) => {
-          e.preventDefault();
-          alert("Merci pour votre message ! Je vous répondrai bientôt.");
-          e.target.reset();
-        });
-      const formInputs = document.querySelectorAll(
-        "#contact-form input, #contact-form textarea"
-      );
-      formInputs.forEach((input) => {
-        input.addEventListener("input", () => {
-          input.classList.toggle("border-green-500", input.checkValidity());
-          input.classList.toggle("border-red-500", !input.checkValidity());
-        });
-      });
+      // Gestion du formulaire de contact avec EmailJS et traductions
+      const contactForm = document.getElementById("contact-form"); // Formulaire de contact
+      const formStatus = document.getElementById("form-status"); // Message de statut
+      if (contactForm && formStatus) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault(); // Empêche le rechargement de la page
+          formStatus.classList.remove(
+            "hidden",
+            "text-green-500",
+            "text-red-500"
+          ); // Réinitialise le statut
 
-      const carousel = document.querySelector(".carousel");
-      const prevBtn = document.querySelector(".carousel-prev");
-      const nextBtn = document.querySelector(".carousel-next");
-      prevBtn.addEventListener("click", () =>
-        carousel.scrollBy({ left: -carousel.offsetWidth, behavior: "smooth" })
-      );
-      nextBtn.addEventListener("click", () =>
-        carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" })
-      );
+          emailjs
+            .sendForm(
+              "service_wy97h8g", // Service ID EmailJS
+              "template_mu4a4zl", // Template ID EmailJS
+              contactForm
+            )
+            .then(
+              () => {
+                formStatus.textContent = i18next.t("Succes"); // Message de succès traduit
+                formStatus.classList.add("text-green-500"); // Style vert pour succès
+                contactForm.reset(); // Réinitialise le formulaire
+                gtag("event", "form_submission", {
+                  event_category: "Contact",
+                  event_label: "Success", // Événement Google Analytics pour suivi
+                });
+              },
+              (error) => {
+                formStatus.textContent = i18next.t("Erreur"); // Message d'erreur traduit
+                formStatus.classList.add("text-red-500"); // Style rouge pour erreur
+                console.error("Erreur EmailJS:", error); // Log pour débogage
+              }
+            );
+        });
+
+        // Validation visuelle des champs du formulaire
+        const formInputs = contactForm.querySelectorAll("input, textarea");
+        formInputs.forEach((input) => {
+          input.addEventListener("input", () => {
+            input.classList.toggle("border-green-500", input.checkValidity()); // Bordure verte si valide
+            input.classList.toggle("border-red-500", !input.checkValidity()); // Bordure rouge si invalide
+          });
+        });
+      }
+
+      // Gestion du carrousel des témoignages avec défilement automatique
+      const carousel = document.querySelector(".carousel"); // Conteneur du carrousel
+      const prevBtn = document.querySelector(".carousel-prev"); // Bouton précédent
+      const nextBtn = document.querySelector(".carousel-next"); // Bouton suivant
+      if (carousel && prevBtn && nextBtn) {
+        prevBtn.addEventListener(
+          "click",
+          () =>
+            carousel.scrollBy({
+              left: -carousel.offsetWidth,
+              behavior: "smooth",
+            }) // Défilement vers la gauche
+        );
+        nextBtn.addEventListener(
+          "click",
+          () =>
+            carousel.scrollBy({
+              left: carousel.offsetWidth,
+              behavior: "smooth",
+            }) // Défilement vers la droite
+        );
+        setInterval(() => nextBtn.click(), 5000); // Défilement automatique toutes les 5 secondes
+      }
     </script>
   </body>
 </html>
