@@ -1,1512 +1,2980 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <!-- Configuration de base du document HTML -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio d'Ismaila Keita, développeur passionné et créatif."
-    />
+<html lang="fr" class="no-js">
 
-    <!-- Balises Open Graph pour le SEO, permettant un meilleur partage sur les réseaux sociaux -->
-    <meta property="og:title" content="Ismaila Keita - Portfolio" />
-    <meta
-      property="og:description"
-      content="Portfolio d'Ismaila Keita, développeur passionné et créatif."
-    />
-    <meta property="og:image" content="./public/IMG_8032.JPG" />
-    <meta
-      property="og:url"
-      content="https://portfolio-ismaila-keita.netlify.app/"
-    />
-    <meta property="og:type" content="website" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ismaila Keita — Développeur Full Stack</title>
+  <meta name="description"
+    content="Portfolio d'Ismaila Keita, Développeur Full Stack à Rufisque – Dakar, Sénégal. React.js, NestJS, PostgreSQL, Prisma. Projets, compétences, expériences et contact.">
+  <meta name="author" content="Ismaila Keita">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#080a0f">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://portfolio-ismaila-keita.netlify.app/">
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
 
-    <!-- Intégration de Google Analytics pour le suivi des visites -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-347673295"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ismaila Keita">
+  <meta property="og:url" content="https://portfolio-ismaila-keita.netlify.app/">
+  <meta property="og:title" content="Ismaila Keita — Développeur Full Stack">
+  <meta property="og:description"
+    content="Développeur Full Stack diplômé en Génie Informatique. React.js, NestJS, PostgreSQL. Découvrez mes réalisations et contactez-moi.">
+  <meta property="og:image" content="https://portfolio-ismaila-keita.netlify.app/public/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ismaila Keita, Développeur Full Stack à Rufisque – Dakar, Sénégal">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ismaila Keita — Développeur Full Stack">
+  <meta name="twitter:description"
+    content="Développeur Full Stack diplômé en Génie Informatique. React.js, NestJS, PostgreSQL.">
+  <meta name="twitter:image" content="https://portfolio-ismaila-keita.netlify.app/public/og-image.png">
+  <meta name="twitter:image:alt" content="Ismaila Keita, Développeur Full Stack à Rufisque – Dakar, Sénégal">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ismaila Keita",
+    "jobTitle": "Développeur Full Stack",
+    "description": "Développeur Full Stack diplômé d'une Licence en Génie Informatique, spécialité Développement Web, basé à Rufisque – Dakar, Sénégal.",
+    "url": "https://portfolio-ismaila-keita.netlify.app/",
+    "image": "https://portfolio-ismaila-keita.netlify.app/public/portrait-ismaila-keita.jpg",
+    "telephone": "+221772309246",
+    "email": "ismaizo234@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rufisque",
+      "addressRegion": "Dakar",
+      "addressCountry": "SN"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "UNIPRO"
+    },
+    "sameAs": [
+      "https://github.com/Ismaizo21",
+      "https://www.linkedin.com/in/ismaila-keita-b0405525a/"
+    ],
+    "knowsAbout": [
+      "React.js",
+      "NestJS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "MySQL",
+      "SQLite",
+      "Python",
+      "Docker",
+      "Git",
+      "API REST",
+      "Tailwind CSS",
+      "JavaScript"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #080a0f;
+      --bg-soft: #0b0e14;
+      --panel: #10141d;
+      --panel-2: #0d1119;
+      --line: #202735;
+      --line-strong: #2c3546;
+      --text: #eef2f8;
+      --muted: #a8b2c3;
+      --muted-2: #7f8a9c;
+      --accent: #a3ff5f;
+      --accent-2: #70e6cf;
+      --accent-soft: rgba(163, 255, 95, .08);
+      --max: 1180px;
+      --radius: 18px;
+      --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-mono: "DM Mono", ui-monospace, "Cascadia Code", monospace;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 70% 55% at 82% -5%, rgba(51, 92, 43, .30), transparent 60%),
+        radial-gradient(ellipse 55% 45% at -8% 42%, rgba(25, 52, 76, .22), transparent 62%);
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button {
+      font: inherit
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #0b1207
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto
+    }
+
+    .mono {
+      font-family: var(--font-mono)
+    }
+
+    .accent {
+      color: var(--accent)
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      flex: none;
+      display: inline-block;
+      vertical-align: -3px
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .svg-sprite {
+      display: none
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 200;
+      padding: 10px 14px;
+      border-radius: 9px;
+      background: var(--accent);
+      color: #0b1207;
+      font-weight: 800;
+      font-size: 13px;
+      transform: translateY(-160%);
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus {
+      transform: none
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(8, 10, 15, .88);
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.055em;
+      line-height: 1;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 1px;
+    }
+
+    .site-header .brand {
+      padding: 12px 8px;
+      margin: -12px -8px
+    }
+
+    .brand span {
+      color: var(--accent)
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px
+    }
+
+    .nav-links a {
+      color: #c4cbd6;
+      font-size: 13.5px;
+      font-weight: 600;
+      position: relative;
+      padding: 6px 0;
+      transition: color .2s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent)
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1)
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+
+    .lang-switch button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      border-radius: 7px;
+      padding: 6px 8px;
+      font: 500 12px var(--font-mono);
+      letter-spacing: .04em;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #0b1207
+    }
+
+    .lang-switch button:hover {
+      color: var(--text)
+    }
+
+    .lang-switch button[aria-pressed="true"]:hover {
+      color: #0b1207
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color .2s ease, color .2s ease;
+    }
+
+    .menu-toggle:hover {
+      border-color: var(--line-strong);
+      color: var(--accent)
+    }
+
+    .menu-toggle .icon-close {
+      display: none
+    }
+
+    .no-js .nav-actions {
+      display: none
+    }
+
+    .no-js .menu-toggle {
+      display: none
+    }
+
+    .no-js .lang-switch {
+      display: none
+    }
+
+    .menu-toggle[aria-expanded="true"] .icon-menu {
+      display: none
+    }
+
+    .menu-toggle[aria-expanded="true"] .icon-close {
+      display: block
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--line-strong);
+      background: #141a27
+    }
+
+    .btn:active {
+      transform: translateY(0)
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #0b1207
+    }
+
+    .btn-primary:hover {
+      background: #b6ff80;
+      border-color: #b6ff80;
+      color: #0b1207
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(163, 255, 95, .55);
+      color: var(--accent);
+      background: var(--panel)
+    }
+
+    .btn-ghost {
+      background: transparent
+    }
+
+    .btn-sm {
+      min-height: 38px;
+      padding: 8px 14px;
+      font-size: 12.5px
+    }
+
+    .btn .icon {
+      width: 17px;
+      height: 17px
+    }
+
+    /* Section primitives */
+    .section {
+      padding: clamp(70px, 9.5vw, 112px) 0
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: clamp(28px, 4vw, 46px)
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font: 500 12px var(--font-mono);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: var(--accent);
+      opacity: .7
+    }
+
+    .section h2 {
+      margin: 0 0 16px;
+      font-size: clamp(30px, 4.5vw, 50px);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+      font-weight: 800;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(15px, 1.5vw, 17px)
+    }
+
+    .lead strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    /* Hero */
+    .hero {
+      padding: clamp(52px, 7.5vw, 88px) 0 clamp(64px, 9vw, 108px)
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 48px;
+      align-items: center
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px;
+      border: 1px solid rgba(163, 255, 95, .28);
+      border-radius: 999px;
+      background: rgba(163, 255, 95, .06);
+      color: #d7e5cf;
+      font: 500 12px var(--font-mono);
+      letter-spacing: .02em;
+    }
+
+    .status .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+      animation: pulse 2.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
       }
-      gtag("js", new Date());
-      gtag("config", "G-347673295"); // ID Google Analytics (à vérifier si tu as un autre ID)
-    </script>
 
-    <!-- Chargement des bibliothèques externes pour les styles et les icônes -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" type="image/png" href="./public/favicon.png" />
-    <link rel="preload" href="./public/IMG_8032.JPG" as="image" />
+      50% {
+        opacity: .55;
+        transform: scale(.82)
+      }
+    }
 
-    <!-- Intégration de i18next pour la gestion multilingue -->
-    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
-    <script
-      src="./public/locales/fr/translation.json"
-      type="text/javascript"
-    ></script>
-    <script
-      src="./public/locales/en/translation.json"
-      type="text/javascript"
-    ></script>
+    .hero h1 {
+      margin: 22px 0 22px;
+      font-size: clamp(38px, 10.5vw, 80px);
+      line-height: 1.01;
+      letter-spacing: -.055em;
+      font-weight: 800;
+    }
 
-    <title>Ismaila Keita - Portfolio</title>
+    .hero h1 .accent {
+      display: inline-block
+    }
 
-    <!-- Styles personnalisés avec commentaires pour chaque classe -->
-    <style>
-      /* Texte avec dégradé pour les titres en relief visuel */
-      .gradient-text {
-        background: linear-gradient(45deg, #f97316, #f59e0b);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+    .hero-lead {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(16px, 1.6vw, 18px)
+    }
+
+    .hero-lead strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin: 28px 0 0
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 22px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .hero-meta .icon {
+      width: 15px;
+      height: 15px;
+      color: var(--accent)
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 26px 0 0
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      color: var(--muted);
+      background: rgba(16, 20, 29, .6);
+      transition: color .2s ease, border-color .2s ease, transform .2s ease, background .2s ease;
+    }
+
+    .social-link:hover {
+      color: var(--accent);
+      border-color: rgba(163, 255, 95, .45);
+      transform: translateY(-2px);
+      background: var(--panel)
+    }
+
+    .social-link .icon {
+      width: 19px;
+      height: 19px
+    }
+
+    .social-label {
+      font: 500 12px var(--font-mono);
+      color: var(--muted-2);
+      margin-left: 4px
+    }
+
+    .portrait-card {
+      position: relative;
+      width: min(100%, 356px);
+      margin: 6px auto 0
+    }
+
+    .portrait-frame {
+      padding: 12px;
+      border: 1px solid rgba(163, 255, 95, .34);
+      border-radius: 28px;
+      background: linear-gradient(145deg, rgba(163, 255, 95, .11), rgba(255, 255, 255, .02));
+      transform: rotate(2deg);
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 20px;
+      filter: saturate(.95) contrast(1.02);
+    }
+
+    .hero-orbit {
+      position: absolute;
+      right: -14px;
+      top: 16px;
+      width: 72px;
+      height: 72px;
+      border: 1px solid rgba(163, 255, 95, .24);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 17px;
+      border: 1px solid rgba(163, 255, 95, .14);
+      border-radius: 50%;
+    }
+
+    .float-tag {
+      position: absolute;
+      left: -26px;
+      bottom: 24px;
+      padding: 12px 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #111720;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, .45);
+      max-width: 210px;
+    }
+
+    .float-tag b {
+      display: block;
+      color: var(--accent);
+      font-size: 13px;
+      line-height: 1.3
+    }
+
+    .float-tag span {
+      display: block;
+      color: var(--muted);
+      font: 12px var(--font-mono);
+      margin-top: 3px;
+      line-height: 1.4
+    }
+
+    /* About */
+    .about-layout {
+      display: grid;
+      gap: 30px
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin: 0 0 16px;
+      max-width: 68ch;
+      font-size: 15.5px
+    }
+
+    .about-copy p:last-child {
+      margin-bottom: 0
+    }
+
+    .about-copy strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    .facts-card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+      padding: 22px;
+      height: max-content;
+    }
+
+    .facts-card h3 {
+      margin: 0 0 14px;
+      font-size: 14px;
+      letter-spacing: .01em
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .fact {
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #080b11
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--accent);
+      font-size: 12px;
+      line-height: 1.4
+    }
+
+    .fact span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+      line-height: 1.45
+    }
+
+    .availability {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 14px;
+      padding: 13px;
+      border: 1px solid rgba(163, 255, 95, .22);
+      border-radius: 12px;
+      background: rgba(163, 255, 95, .05);
+      color: #d3e8c9;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    .availability .icon {
+      width: 16px;
+      height: 16px;
+      color: var(--accent);
+      margin-top: 2px
+    }
+
+    /* Skills */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      margin: 0 0 22px;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .legend li {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .legend .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--muted-2)
+    }
+
+    .legend .dot.advanced {
+      background: var(--accent)
+    }
+
+    .legend .dot.practiced {
+      background: var(--accent-2)
+    }
+
+    .legend .dot.basics {
+      background: var(--muted-2)
+    }
+
+    .skills-grid {
+      display: grid;
+      gap: 14px
+    }
+
+    .skill-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(160deg, #111620, #0b0e14);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 12px;
+      font-size: 15px;
+      line-height: 1.3
+    }
+
+    .skill-card h3 .icon {
+      width: 17px;
+      height: 17px;
+      color: var(--accent)
+    }
+
+    .skill-group {
+      margin-top: 10px
+    }
+
+    .skill-group-label {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin: 0 0 7px;
+      color: var(--muted-2);
+      font: 500 11.5px var(--font-mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .skill-group-label::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--muted-2);
+      flex: none
+    }
+
+    .skill-group-label.level-advanced::before {
+      background: var(--accent)
+    }
+
+    .skill-group-label.level-practiced::before {
+      background: var(--accent-2)
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 9.5px;
+      border-radius: 7px;
+      border: 1px solid rgba(163, 255, 95, .22);
+      background: rgba(163, 255, 95, .08);
+      color: #d8f7c7;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .skill-tag.level-practiced {
+      border-color: rgba(112, 230, 207, .25);
+      background: rgba(112, 230, 207, .08);
+      color: #c8f5ec
+    }
+
+    .skill-tag.level-basics {
+      border-color: rgba(255, 255, 255, .10);
+      background: rgba(255, 255, 255, .03);
+      color: var(--muted)
+    }
+
+    /* Projects */
+    .project {
+      display: grid;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    .project+.project {
+      margin-top: 22px
+    }
+
+    .project-featured {
+      border-color: rgba(163, 255, 95, .36)
+    }
+
+    .project-visual {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel-2);
+    }
+
+    .project-content {
+      padding: clamp(24px, 4vw, 40px);
+      display: flex;
+      flex-direction: column;
+      gap: 0
+    }
+
+    .project-kicker {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font: 500 12px var(--font-mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+
+    .project-kicker .sep {
+      color: var(--muted-2)
+    }
+
+    .project h3 {
+      margin: 0 0 12px;
+      font-size: clamp(26px, 3.2vw, 36px);
+      line-height: 1.1;
+      letter-spacing: -.035em;
+      font-weight: 800;
+    }
+
+    .project-lead {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 58ch
+    }
+
+    .case-grid {
+      display: grid;
+      gap: 14px;
+      margin: 0 0 20px
+    }
+
+    .case-grid h4 {
+      margin: 0 0 5px;
+      font-size: 12px;
+      color: var(--text);
+      letter-spacing: .01em
+    }
+
+    .case-grid p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.6
+    }
+
+    .project h4 {
+      font-size: 12.5px;
+      margin: 0 0 8px;
+      letter-spacing: .01em
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      display: grid;
+      gap: 7px
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 21px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55
+    }
+
+    .feature-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .58em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(163, 255, 95, .09);
+    }
+
+    .role-note {
+      margin: 0 0 20px;
+      padding: 14px 16px;
+      border-left: 2px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      background: rgba(163, 255, 95, .05);
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .role-note strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 0 20px
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 9px;
+      border-radius: 6px;
+      border: 1px solid rgba(163, 255, 95, .20);
+      background: rgba(163, 255, 95, .06);
+      color: #d2efc1;
+      font: 12px var(--font-mono);
+      line-height: 1.45;
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      align-items: center;
+      margin-top: auto
+    }
+
+    .project-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted-2);
+      font: 12px var(--font-mono);
+      letter-spacing: .01em;
+    }
+
+    .project-note .icon {
+      width: 14px;
+      height: 14px
+    }
+
+    /* Santé Téranga cover */
+    .sante-cover {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 26px;
+      position: relative;
+      background:
+        radial-gradient(circle at 24% 18%, rgba(163, 255, 95, .18), transparent 42%),
+        radial-gradient(circle at 82% 80%, rgba(112, 230, 207, .10), transparent 42%),
+        #09110c;
+    }
+
+    .sante-cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .4;
+      background-image: linear-gradient(rgba(163, 255, 95, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(163, 255, 95, .05) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(circle at 50% 50%, #000 20%, transparent 78%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 20%, transparent 78%);
+    }
+
+    .sante-top {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start
+    }
+
+    .sante-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(163, 255, 95, .35);
+      background: rgba(8, 10, 15, .65);
+      color: var(--accent);
+      font: 600 12px var(--font-mono);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .sante-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 9px var(--accent)
+    }
+
+    .sante-note {
+      color: rgba(168, 178, 195, .75);
+      font: 12px var(--font-mono);
+      letter-spacing: .04em;
+      text-align: right;
+      line-height: 1.5
+    }
+
+    .sante-art {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 300px);
+      margin: 6px auto;
+      aspect-ratio: 1
+    }
+
+    .sante-art svg {
+      width: 100%;
+      height: 100%;
+      display: block
+    }
+
+    .sante-copy {
+      position: relative;
+      z-index: 1;
+      padding-top: 4px
+    }
+
+    .sante-copy .kicker {
+      display: block;
+      color: var(--accent);
+      font: 500 12px var(--font-mono);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 6px
+    }
+
+    .sante-copy strong {
+      display: block;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+      font-weight: 800
+    }
+
+    .sante-copy .sub {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5
+    }
+
+    .sante-copy .sub b {
+      color: #cfe4c6;
+      font-weight: 600
+    }
+
+    /* Code Snippets screenshot */
+    .shot {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: #0b0e14
+    }
+
+    .shot-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 11px 13px;
+      border-bottom: 1px solid var(--line);
+      background: #0d1119;
+      flex: none;
+    }
+
+    .shot-bar i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2b3446;
+      display: block
+    }
+
+    .shot-bar .url {
+      margin-left: 8px;
+      color: var(--muted-2);
+      font: 12px var(--font-mono);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .shot-bar .url span {
+      color: var(--accent)
+    }
+
+    .shot img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      object-position: top center
+    }
+
+    .shot-caption {
+      flex: none;
+      padding: 9px 13px;
+      border-top: 1px solid var(--line);
+      color: var(--muted-2);
+      font: 12px var(--font-mono);
+      letter-spacing: .02em;
+    }
+
+    /* Additional projects grid */
+    .more-projects {
+      margin-top: 42px
+    }
+
+    .projects-cards-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 20px
+    }
+
+    .project-card-item {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(160deg, #10151e, #0b0e14);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card-item .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px
+    }
+
+    .project-card-item .card-badge {
+      font: 600 11px var(--font-mono);
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(163, 255, 95, .08);
+      border: 1px solid rgba(163, 255, 95, .22);
+      color: var(--accent);
+    }
+
+    .project-card-item h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.25
+    }
+
+    .project-card-item p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.6;
+      flex-grow: 1
+    }
+
+    .project-card-item .tags {
+      margin: 0
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 16px;
+      margin-left: 9px;
+      padding-left: 27px;
+      border-left: 1px solid var(--line-strong)
+    }
+
+    .entry {
+      position: relative;
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel)
+    }
+
+    .entry::before {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 28px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(163, 255, 95, .10);
+    }
+
+    .entry .date {
+      font: 600 12px var(--font-mono);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--accent)
+    }
+
+    .entry h3 {
+      margin: 7px 0 2px;
+      font-size: 18px;
+      line-height: 1.25
+    }
+
+    .entry .company {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500
+    }
+
+    .entry ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 6px
+    }
+
+    .entry li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55
+    }
+
+    .entry li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .62em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--line-strong)
+    }
+
+    /* Education & Details */
+    .education-grid {
+      display: grid;
+      gap: 16px
+    }
+
+    .edu-card {
+      padding: clamp(22px, 4vw, 30px);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+    }
+
+    .edu-card .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 14px;
+      padding: 6px 11px;
+      border: 1px solid rgba(163, 255, 95, .35);
+      border-radius: 999px;
+      background: rgba(163, 255, 95, .08);
+      color: var(--accent);
+      font: 600 12px var(--font-mono);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .edu-card .status-pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent)
+    }
+
+    .edu-card h3 {
+      margin: 0 0 5px;
+      font-size: clamp(21px, 2.6vw, 27px);
+      line-height: 1.2;
+      letter-spacing: -.025em
+    }
+
+    .edu-card .specialty {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600
+    }
+
+    .edu-card .place {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .edu-card .place .icon {
+      width: 15px;
+      height: 15px;
+      color: var(--accent)
+    }
+
+    .edu-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      font-size: 13px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--muted-2)
+    }
+
+    .edu-card h4 .icon {
+      width: 15px;
+      height: 15px;
+      color: var(--accent)
+    }
+
+    .goal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px
+    }
+
+    .goal-list li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55
+    }
+
+    .goal-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .58em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(163, 255, 95, .09)
+    }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 14px
+    }
+
+    .interest-pill {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #090d14;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .interest-pill::before {
+      content: "→";
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-weight: 700
+    }
+
+    /* Contact */
+    .contact-box {
+      display: grid;
+      gap: 30px;
+      padding: clamp(26px, 5vw, 46px);
+      border: 1px solid rgba(163, 255, 95, .28);
+      border-radius: 24px;
+      background: linear-gradient(120deg, rgba(163, 255, 95, .075), var(--panel));
+    }
+
+    .contact-box h2 {
+      margin: 0 0 12px
+    }
+
+    .contact-box .lead {
+      margin: 0
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 12px;
+      margin: 22px 0 0
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13.5px
+    }
+
+    .contact-item .icon {
+      width: 16px;
+      height: 16px;
+      color: var(--accent);
+      margin-top: 3px
+    }
+
+    .contact-item a:hover {
+      color: var(--accent)
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 1px
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      align-items: flex-start;
+      margin-top: 24px
+    }
+
+    .contact-actions .btn {
+      flex: 0 1 auto
+    }
+
+    .contact-side {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 12.5px
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center
+    }
+
+    .footer-inner .brand {
+      font-size: 16px
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      transition: color .2s ease
+    }
+
+    .footer-links a:hover {
+      color: var(--accent)
+    }
+
+    .footer-note {
+      color: var(--muted-2);
+      font: 12px var(--font-mono);
+      letter-spacing: .02em
+    }
+
+    /* Reveal — visible by default, progressively enhanced */
+    .reveal {
+      opacity: 1;
+      transform: none
+    }
+
+    .reveal.is-pending {
+      opacity: 0;
+      transform: translateY(18px)
+    }
+
+    .reveal.is-pending.is-visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .reveal-ready .reveal {
+      transition: opacity .62s ease, transform .62s ease
+    }
+
+    .no-js .reveal {
+      opacity: 1 !important;
+      transform: none !important
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
       }
 
-      /* Animation progressive pour les barres de progression des compétences */
-      .progress-bar {
-        transition: width 1s ease-in-out;
+      *,
+      *::before,
+      *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important
       }
 
-      /* Positionnement des particules d'arrière-plan pour l'effet visuel */
-      #particles-js {
+      .reveal,
+      .reveal.is-pending,
+      .reveal.is-pending.is-visible {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @media (min-width:560px) {
+      .case-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .projects-cards-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .interests-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media (min-width:640px) {
+      .wrap {
+        width: min(var(--max), calc(100% - 56px))
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .education-grid {
+        grid-template-columns: 1.08fr .92fr
+      }
+    }
+
+    @media (min-width:900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.18fr) minmax(280px, .82fr);
+        gap: 62px
+      }
+
+      .portrait-card {
+        margin: 0 0 0 auto
+      }
+
+      .about-layout {
+        grid-template-columns: 1.18fr .82fr;
+        gap: 46px;
+        align-items: start
+      }
+
+      .projects-cards-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .contact-box {
+        grid-template-columns: 1.08fr .92fr;
+        align-items: center
+      }
+
+      .contact-side {
+        align-items: flex-end
+      }
+
+      .contact-side .contact-actions {
+        justify-content: flex-end
+      }
+    }
+
+    @media (min-width:1000px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .project {
+        grid-template-columns: 1.04fr .96fr
+      }
+
+      .project.reverse {
+        grid-template-columns: .96fr 1.04fr
+      }
+
+      .project-visual {
+        border-bottom: 0;
+        border-right: 1px solid var(--line)
+      }
+
+      .project.reverse .project-visual {
+        order: 2;
+        border-right: 0;
+        border-left: 1px solid var(--line)
+      }
+
+      .project.reverse .project-content {
+        order: 1
+      }
+    }
+
+    @media (max-width:899px) {
+      .site-header .nav {
+        position: relative
+      }
+
+      .nav-links {
         position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 16px 20px 20px;
+        background: #0a0d13;
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 26px 42px rgba(0, 0, 0, .5);
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .nav-links a {
+        padding: 13px 4px;
+        border-bottom: 1px solid rgba(255, 255, 255, .05);
+        font-size: 15px
+      }
+
+      .nav-links a:last-child {
+        border-bottom: 0
+      }
+
+      .nav-links a::after {
+        display: none
+      }
+
+      .menu-toggle {
+        display: inline-flex
+      }
+
+      .no-js .nav {
+        flex-wrap: wrap;
+        row-gap: 0
+      }
+
+      .no-js .nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px 16px;
         width: 100%;
-        height: 100%;
-        z-index: 0;
-      }
-
-      /* Styles pour la navigation accessible via clavier */
-      a:focus,
-      button:focus {
-        outline: 2px solid #f97316;
-        outline-offset: 2px;
-      }
-
-      /* Classe pour rendre un élément visible uniquement pour les lecteurs d’écran */
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
+        order: 3;
+        padding: 8px 0 12px;
+        background: none;
         border: 0;
+        box-shadow: none;
       }
 
-      /* Animation pour le menu mobile */
-      #mobile-menu {
-        transition: transform 0.3s ease-in-out;
-        transform: translateY(-100%);
+      .no-js .nav-links a {
+        padding: 6px 0;
+        border: 0;
+        font-size: 13.5px
       }
-      #mobile-menu:not(.hidden) {
-        transform: translateY(0);
-      }
-    </style>
-  </head>
-  <body
-    class="font-poppins bg-gray-50 text-gray-800 antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
-  >
-    <!-- Preloader : Animation de chargement initiale avant que le contenu ne soit visible -->
-    <div
-      id="preloader"
-      class="fixed inset-0 bg-gray-900 flex items-center justify-center z-50"
-    >
-      <div
-        class="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"
-      ></div>
-    </div>
 
-    <!-- Header : Barre de navigation fixe en haut de la page -->
-    <header
-      class="bg-white dark:bg-gray-800 shadow-lg fixed w-full z-50 border-b-4 border-orange-500"
-      aria-label="Navigation principale"
-    >
-      <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <div class="logo text-2xl md:text-3xl font-bold gradient-text">
-          Ismaila Keita
+      .float-tag {
+        left: -12px
+      }
+
+      .sante-cover {
+        min-height: 380px
+      }
+    }
+
+    @media (max-width:559px) {
+      .wrap {
+        width: calc(100% - 30px)
+      }
+
+      .hero h1 {
+        letter-spacing: -.045em
+      }
+
+      .facts {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .float-tag {
+        left: -6px;
+        bottom: 16px;
+        padding: 10px 12px
+      }
+
+      .float-tag b {
+        font-size: 12px
+      }
+
+      .project-content {
+        padding: 22px 19px
+      }
+
+      .sante-cover {
+        padding: 20px;
+        min-height: 360px
+      }
+
+      .sante-art {
+        width: min(100%, 250px)
+      }
+
+      .shot img {
+        min-height: 240px
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-fr="Aller au contenu" data-en="Skip to content">Aller au contenu</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+      <path d="m22 6-10 7L2 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linejoin="round" />
+      <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-code" viewBox="0 0 24 24">
+      <path d="m8 6-6 6 6 6M16 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-server" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+      <rect x="3" y="13" width="18" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+      <path d="M7 8h.01M7 17h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-database" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2" />
+      <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" fill="none" stroke="currentColor"
+        stroke-width="2" />
+    </symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+      <path
+        d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24">
+      <circle cx="13.5" cy="6.5" r="1" fill="currentColor" />
+      <circle cx="17.5" cy="10.5" r="1" fill="currentColor" />
+      <circle cx="8.5" cy="7.5" r="1" fill="currentColor" />
+      <circle cx="6.5" cy="12.5" r="1" fill="currentColor" />
+      <path
+        d="M12 2a10 10 0 0 0 0 20c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.4-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h2.5A4 4 0 0 0 22 11.2 9.9 9.9 0 0 0 12 2Z"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-graduation" viewBox="0 0 24 24">
+      <path d="M22 10 12 5 2 10l10 5 10-5Z" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linejoin="round" />
+      <path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24">
+      <rect x="2" y="7" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M2 13h20" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24">
+      <path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <rect x="4" y="11" width="16" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+      <path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" stroke-width="2" />
+    </symbol>
+    <symbol id="i-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" />
+      <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2" />
+      <circle cx="12" cy="12" r="1" fill="currentColor" />
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="IK. — Ismaila Keita, accueil"
+        data-aria-fr="IK. — Ismaila Keita, accueil" data-aria-en="IK. — Ismaila Keita, home">IK<span
+          aria-hidden="true">.</span></a>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Navigation principale" data-aria-fr="Navigation principale"
+        data-aria-en="Main navigation">
+        <a href="#about" data-fr="À propos" data-en="About">À propos</a>
+        <a href="#skills" data-fr="Compétences" data-en="Skills">Compétences</a>
+        <a href="#projects" data-fr="Projets" data-en="Projects">Projets</a>
+        <a href="#experience" data-fr="Expérience" data-en="Experience">Expérience</a>
+        <a href="#education" data-fr="Formation" data-en="Education">Formation</a>
+        <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Langue" data-aria-fr="Langue" data-aria-en="Language">
+          <button type="button" data-lang="fr" aria-pressed="true" aria-label="FR — Français">FR</button>
+          <button type="button" data-lang="en" aria-pressed="false" aria-label="EN — English">EN</button>
         </div>
-        <nav class="hidden md:block">
-          <ul class="flex space-x-8">
-            <li>
-              <a
-                href="#accueil"
-                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
-                >Accueil</a
-              >
-            </li>
-            <li>
-              <a
-                href="#apropos"
-                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
-                >À propos</a
-              >
-            </li>
-            <li>
-              <a
-                href="#experience"
-                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
-                >Expérience</a
-              >
-            </li>
-            <li>
-              <a
-                href="#competences"
-                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
-                >Compétences</a
-              >
-            </li>
-            <li>
-              <a
-                href="#projets"
-                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
-                >Projets</a
-              >
-            </li>
-            <li>
-              <a
-                href="#temoignages"
-                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
-                >Témoignages</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500 transition-colors duration-300"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <div class="flex items-center gap-4">
-          <!-- Bouton pour basculer entre mode clair et sombre -->
-          <button
-            id="theme-toggle"
-            class="p-2 rounded-full bg-gray-200 text-gray-700 hover:bg-orange-500 hover:text-white transition-colors duration-300"
-            aria-label="Basculer le thème"
-          >
-            <i class="fas fa-moon"></i>
-          </button>
-          <!-- Bouton pour ouvrir le menu mobile sur petits écrans -->
-          <button
-            class="md:hidden text-2xl text-gray-700 dark:text-gray-200"
-            id="menu-toggle"
-            aria-label="Ouvrir le menu mobile"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg"
-      >
-        <ul class="flex flex-col items-center py-4 space-y-4">
-          <li>
-            <a
-              href="#accueil"
-              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
-              >Accueil</a
-            >
-          </li>
-          <li>
-            <a
-              href="#apropos"
-              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
-              >À propos</a
-            >
-          </li>
-          <li>
-            <a
-              href="#experience"
-              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
-              >Expérience</a
-            >
-          </li>
-          <li>
-            <a
-              href="#competences"
-              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
-              >Compétences</a
-            >
-          </li>
-          <li>
-            <a
-              href="#projets"
-              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
-              >Projets</a
-            >
-          </li>
-          <li>
-            <a
-              href="#temoignages"
-              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
-              >Témoignages</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="text-lg text-gray-700 dark:text-gray-200 hover:text-orange-500"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </div>
-    </header>
-
-    <!-- Section d'accueil avec effet de particules et animation -->
-    <section
-      id="accueil"
-      class="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-100 to-orange-50 dark:from-gray-800 dark:to-gray-700 pt-20 overflow-hidden"
-    >
-      <h1 class="sr-only">Portfolio d'Ismaila Keita</h1>
-      <div id="particles-js"></div>
-      <div class="container mx-auto px-6 relative z-10">
-        <img
-          src="./public/IMG_8032.JPG"
-          loading="lazy"
-          alt="Portrait d’Ismaila Keita, étudiant en génie informatique souriant"
-          class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 border-4 border-orange-500 shadow-lg"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        />
-        <h1
-          class="text-4xl md:text-6xl font-bold mb-4"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          Salut, je suis <span class="gradient-text">Ismaila</span>
-        </h1>
-        <p
-          class="text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-2xl mx-auto mb-8"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-delay="300"
-        >
-          Développeur passionné, créatif et toujours à la recherche de nouveaux
-          défis.
-        </p>
-        <button
-          class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-md flex items-center gap-2 mx-auto"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-delay="600"
-        >
-          <i class="fas fa-download"></i>
-          <a href="./public/Ismaila Keita.pdf" download="CV_Ismaila_Keita.pdf"
-            >Télécharger mon CV</a
-          >
+        <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav"
+          aria-label="Ouvrir le menu">
+          <svg class="icon icon-menu" aria-hidden="true">
+            <use href="#i-menu" />
+          </svg>
+          <svg class="icon icon-close" aria-hidden="true">
+            <use href="#i-close" />
+          </svg>
         </button>
       </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="status">
+            <span class="dot" aria-hidden="true"></span>
+            <span data-fr="Disponible pour stage, poste junior &amp; collaboration"
+              data-en="Open to internship, junior role &amp; collaboration">Disponible pour stage, poste junior &amp;
+              collaboration</span>
+          </div>
+
+          <h1 data-fr="Développeur<br><span class='accent'>Full Stack.</span>"
+            data-en="Full Stack<br><span class='accent'>Developer.</span>">Développeur<br><span class='accent'>Full
+              Stack.</span></h1>
+
+          <p class="hero-lead"
+            data-fr="Diplômé en Génie Informatique, spécialisé en Développement Web. Je conçois des applications complètes, performantes et utiles avec <strong>React.js, NestJS et PostgreSQL</strong>."
+            data-en="Graduate in Computer Science, specialised in Web Development. I build full, performant and useful web applications using <strong>React.js, NestJS and PostgreSQL</strong>.">
+            Diplômé en Génie Informatique, spécialisé en Développement Web. Je conçois des applications complètes,
+            performantes et utiles avec <strong>React.js, NestJS et PostgreSQL</strong>.</p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">
+              <span data-fr="Voir mes projets" data-en="Explore my projects">Voir mes projets</span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-right" />
+              </svg>
+            </a>
+            <a class="btn btn-secondary" href="public/Ismaila%20Keita.pdf" download="Ismaila Keita.pdf">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-download" />
+              </svg>
+              <span data-fr="Télécharger mon CV" data-en="Download my CV">Télécharger mon CV</span>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-pin" />
+              </svg>
+              <span data-fr="Rufisque – Dakar, Sénégal" data-en="Rufisque – Dakar, Senegal">Rufisque – Dakar,
+                Sénégal</span>
+            </span>
+            <span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-phone" />
+              </svg>
+              <a href="tel:+221772309246">+221 77 230 92 46</a>
+            </span>
+            <span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-mail" />
+              </svg>
+              <a href="mailto:ismaizo234@gmail.com">ismaizo234@gmail.com</a>
+            </span>
+          </div>
+
+          <div class="socials">
+            <a class="social-link" href="https://github.com/Ismaizo21" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub" data-aria-fr="Profil GitHub" data-aria-en="GitHub profile">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-github" />
+              </svg>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/ismaila-keita-b0405525a/" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn" data-aria-fr="Profil LinkedIn"
+              data-aria-en="LinkedIn profile">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-linkedin" />
+              </svg>
+            </a>
+            <a class="social-link" href="mailto:ismaizo234@gmail.com" aria-label="Email" data-aria-fr="Envoyer un email"
+              data-aria-en="Send an email">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-mail" />
+              </svg>
+            </a>
+            <a class="social-link" href="tel:+221772309246" aria-label="Téléphone" data-aria-fr="Appeler"
+              data-aria-en="Call">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-phone" />
+              </svg>
+            </a>
+            <span class="social-label" data-fr="Dakar · Sénégal" data-en="Dakar · Senegal">Dakar · Sénégal</span>
+          </div>
+        </div>
+
+        <div class="portrait-card">
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <div class="portrait-frame">
+            <img src="public/portrait-ismaila-keita.jpg" alt="Portrait d'Ismaila Keita"
+              data-alt-fr="Portrait d'Ismaila Keita" data-alt-en="Portrait of Ismaila Keita" width="616" height="616"
+              loading="eager" fetchpriority="high" decoding="async">
+          </div>
+          <div class="float-tag">
+            <b>React.js · NestJS</b>
+            <span data-fr="Développement Full Stack" data-en="Full Stack development">Développement Full Stack</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Section À propos avec informations personnelles et animation -->
-    <section id="apropos" class="py-20 bg-white dark:bg-gray-800">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          À propos de moi
-        </h2>
-        <div
-          class="max-w-4xl mx-auto bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-8"
-        >
-          <img
-            src="./public/IMG_8036.JPG"
-            loading="lazy"
-            alt="Photo de profil d’Ismaila Keita, développeur et étudiant en informatique"
-            class="w-40 h-40 md:w-52 md:h-52 rounded-full border-4 border-orange-200"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="100"
-          />
-          <div class="text-center md:text-left">
-            <p
-              class="text-lg text-gray-700 dark:text-gray-200 mb-6"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="300"
-            >
-              Je suis un étudiant en Génie Informatique, passionné par la
-              technologie et le développement de solutions innovantes. J'aime
-              résoudre des problèmes et travailler sur des projets créatifs.
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">01 / <span data-fr="À propos" data-en="About">À propos</span></div>
+          <h2 data-fr="Profil professionnel<br><span class='accent'>&amp; vision technique.</span>"
+            data-en="Professional profile<br><span class='accent'>&amp; technical vision.</span>">Profil
+            professionnel<br><span class='accent'>&amp; vision technique.</span></h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-copy reveal">
+            <p data-fr="Développeur Full Stack diplômé d'une <strong>Licence en Génie Informatique, spécialité Développement Web</strong>. Je possède des compétences en développement frontend et backend, notamment avec <strong>React.js</strong> et <strong>NestJS</strong>."
+              data-en="Full Stack Developer holding a Bachelor's Degree in Computer Science, specialised in Web Development. I possess solid skills in frontend and backend development, notably with <strong>React.js</strong> and <strong>NestJS</strong>.">
+              Développeur Full Stack diplômé d'une <strong>Licence en Génie Informatique, spécialité Développement
+                Web</strong>. Je possède des compétences en développement frontend et backend, notamment avec
+              <strong>React.js</strong> et <strong>NestJS</strong>.
             </p>
-            <ul
-              class="text-lg text-gray-700 dark:text-gray-200 space-y-3"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="500"
-            >
-              <li>
-                <strong class="text-orange-500">Nom :</strong> Ismaila Keita
-              </li>
-              <li>
-                <strong class="text-orange-500">Université :</strong> Univers
-                Professionnelle
-              </li>
-              <li>
-                <strong class="text-orange-500">Localisation :</strong>
-                Rufisque, Dakar
-              </li>
-              <li>
-                <strong class="text-orange-500">Passions :</strong> Sport
-                (Football), Voyages
-              </li>
+
+            <p data-fr="Je travaille sur la conception d'applications web, le développement d'<strong>API REST</strong> et la gestion de bases de données relationnelles."
+              data-en="I work on the design of web applications, REST API development, and relational database management.">
+              Je travaille sur la conception d'applications web, le développement d'<strong>API REST</strong> et la
+              gestion de bases de données relationnelles.</p>
+
+            <p data-fr="Également à l'aise avec <strong>Python, Git et Docker</strong>, j'ai participé à la conception et au développement de solutions numériques concrètes, notamment dans le domaine de la <strong>HealthTech</strong>."
+              data-en="Also comfortable with <strong>Python, Git and Docker</strong>, I took part in the design and development of concrete digital solutions, particularly in the <strong>HealthTech</strong> field.">
+              Également à l'aise avec <strong>Python, Git et Docker</strong>, j'ai participé à la conception et au
+              développement de solutions numériques concrètes, notamment dans le domaine de la
+              <strong>HealthTech</strong>.
+            </p>
+
+            <p data-fr="Curieux, rigoureux et motivé, je souhaite rejoindre une équipe technique pour contribuer à des projets innovants et continuer à développer mes compétences."
+              data-en="Curious, rigorous and motivated, I wish to join a technical team to contribute to innovative projects and continue growing my skills.">
+              Curieux, rigoureux et motivé, je souhaite rejoindre une équipe technique pour contribuer à des projets
+              innovants et continuer à développer mes compétences.</p>
+          </div>
+
+          <aside class="facts-card reveal" aria-label="Informations clés" data-aria-fr="Informations clés"
+            data-aria-en="Key information">
+            <h3 data-fr="En un coup d'œil" data-en="At a glance">En un coup d'œil</h3>
+            <div class="facts">
+              <div class="fact">
+                <strong data-fr="Licence Génie Info" data-en="BSc Computer Science">Licence Génie Info</strong>
+                <span data-fr="Mention « Excellent »" data-en="Highest Honours">Mention « Excellent »</span>
+              </div>
+              <div class="fact">
+                <strong>Rufisque – Dakar</strong>
+                <span data-fr="Sénégal" data-en="Senegal">Sénégal</span>
+              </div>
+              <div class="fact">
+                <strong>Full Stack</strong>
+                <span>React.js · NestJS</span>
+              </div>
+              <div class="fact">
+                <strong data-fr="Recherche" data-en="Seeking">Recherche</strong>
+                <span data-fr="Stage, junior, collab." data-en="Internship, junior, collab.">Stage, junior,
+                  collab.</span>
+              </div>
+            </div>
+            <div class="availability">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-check" />
+              </svg>
+              <span data-fr="Disponible immédiatement pour un stage, un emploi junior ou une collaboration technique."
+                data-en="Immediately available for an internship, junior position or technical collaboration.">Disponible
+                immédiatement pour un stage, un emploi junior ou une collaboration technique.</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">02 / <span data-fr="Compétences" data-en="Skills">Compétences</span></div>
+          <h2 data-fr="Compétences techniques<br><span class='accent'>&amp; hiérarchie claire.</span>"
+            data-en="Technical skills<br><span class='accent'>&amp; clear hierarchy.</span>">Compétences
+            techniques<br><span class="accent">&amp; hiérarchie claire.</span></h2>
+          <p class="lead"
+            data-fr="Une cartographie fidèle de mes compétences, sans pourcentages artificiels ni surévaluation."
+            data-en="An honest overview of my technical abilities, without artificial percentages or inflated ratings.">
+            Une cartographie fidèle de mes compétences, sans pourcentages artificiels ni surévaluation.</p>
+        </div>
+
+        <ul class="legend reveal" aria-label="Légende des niveaux" data-aria-fr="Légende des niveaux"
+          data-aria-en="Level legend">
+          <li><span class="dot advanced" aria-hidden="true"></span><span data-fr="Avancé"
+              data-en="Advanced">Avancé</span></li>
+          <li><span class="dot practiced" aria-hidden="true"></span><span data-fr="Intermédiaire / Pratiqué"
+              data-en="Intermediate / Practiced">Intermédiaire / Pratiqué</span></li>
+          <li><span class="dot basics" aria-hidden="true"></span><span data-fr="Notions" data-en="Basics">Notions</span>
+          </li>
+        </ul>
+
+        <div class="skills-grid">
+          <!-- FRONTEND -->
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true">
+                <use href="#i-code" />
+              </svg><span data-fr="Frontend" data-en="Frontend">Frontend</span></h3>
+            <div class="skill-group">
+              <p class="skill-group-label level-advanced" data-fr="Avancé" data-en="Advanced">Avancé</p>
+              <div class="skill-tags">
+                <span class="skill-tag">React.js</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group-label level-practiced" data-fr="Maîtrisé en projet" data-en="Used in projects">
+                Maîtrisé en projet</p>
+              <div class="skill-tags">
+                <span class="skill-tag level-practiced">JavaScript</span>
+                <span class="skill-tag level-practiced">HTML5</span>
+                <span class="skill-tag level-practiced">CSS3</span>
+                <span class="skill-tag level-practiced">Tailwind CSS</span>
+                <span class="skill-tag level-practiced">Bootstrap</span>
+                <span class="skill-tag level-practiced" data-fr="Interfaces web responsives"
+                  data-en="Responsive Web UI">Interfaces web responsives</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- BACKEND -->
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true">
+                <use href="#i-server" />
+              </svg><span data-fr="Backend" data-en="Backend">Backend</span></h3>
+            <div class="skill-group">
+              <p class="skill-group-label level-advanced" data-fr="Avancé" data-en="Advanced">Avancé</p>
+              <div class="skill-tags">
+                <span class="skill-tag">NestJS</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group-label level-practiced" data-fr="Intermédiaire &amp; API"
+                data-en="Intermediate &amp; API">Intermédiaire &amp; API</p>
+              <div class="skill-tags">
+                <span class="skill-tag level-practiced">Python (intermédiaire)</span>
+                <span class="skill-tag level-practiced">API REST</span>
+                <span class="skill-tag level-practiced">PHP</span>
+                <span class="skill-tag level-practiced">Java</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- BASES DE DONNÉES -->
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true">
+                <use href="#i-database" />
+              </svg><span data-fr="Bases de données" data-en="Databases">Bases de données</span></h3>
+            <div class="skill-group">
+              <p class="skill-group-label level-advanced" data-fr="Pratiqué en projet" data-en="Used in projects">
+                Pratiqué en projet</p>
+              <div class="skill-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Prisma ORM</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group-label level-practiced" data-fr="Systèmes relationnels" data-en="Relational systems">
+                Systèmes relationnels</p>
+              <div class="skill-tags">
+                <span class="skill-tag level-practiced">MySQL</span>
+                <span class="skill-tag level-practiced">SQLite</span>
+                <span class="skill-tag level-practiced" data-fr="Conception &amp; gestion BD"
+                  data-en="DB design &amp; management">Conception &amp; gestion BD</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- OUTILS & DEVOPS -->
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true">
+                <use href="#i-settings" />
+              </svg><span data-fr="Outils &amp; Environnement" data-en="Tools &amp; Environment">Outils &amp;
+                Environnement</span></h3>
+            <div class="skill-group">
+              <p class="skill-group-label level-advanced" data-fr="Quotidien" data-en="Daily use">Quotidien</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Git &amp; GitHub</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Docker Compose</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <p class="skill-group-label level-practiced" data-fr="Système &amp; IDE" data-en="System &amp; IDE">
+                Système &amp; IDE</p>
+              <div class="skill-tags">
+                <span class="skill-tag level-practiced">Linux</span>
+                <span class="skill-tag level-practiced">Visual Studio Code</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- FRAMEWORKS COMPLÉMENTAIRES -->
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true">
+                <use href="#i-code" />
+              </svg><span data-fr="Frameworks compl." data-en="Additional Frameworks">Frameworks compl.</span></h3>
+            <div class="skill-group">
+              <p class="skill-group-label" data-fr="Notions" data-en="Basics">Notions</p>
+              <div class="skill-tags">
+                <span class="skill-tag level-basics">Flask (notions)</span>
+                <span class="skill-tag level-basics">Django (notions)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- AUTRES COMPÉTENCES -->
+          <article class="skill-card reveal">
+            <h3><svg class="icon" aria-hidden="true">
+                <use href="#i-palette" />
+              </svg><span data-fr="Autres compétences" data-en="Other Skills">Autres compétences</span></h3>
+            <div class="skill-group">
+              <p class="skill-group-label level-practiced" data-fr="Bureautique &amp; Visuel"
+                data-en="Office &amp; Design">Bureautique &amp; Visuel</p>
+              <div class="skill-tags">
+                <span class="skill-tag level-practiced">Microsoft Word</span>
+                <span class="skill-tag level-practiced">Microsoft PowerPoint</span>
+                <span class="skill-tag level-practiced">Canva</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">03 / <span data-fr="Projets" data-en="Projects">Projets</span></div>
+          <h2 data-fr="Projets informatiques<br><span class='accent'>&amp; réalisations concrètes.</span>"
+            data-en="Software projects<br><span class='accent'>&amp; concrete builds.</span>">Projets
+            informatiques<br><span class="accent">&amp; réalisations concrètes.</span></h2>
+          <p class="lead"
+            data-fr="Des projets concrets menés avec rigueur : architecture, technologies réelles et contributions vérifiables."
+            data-en="Concrete projects built with rigour: architecture, actual technologies and verifiable contributions.">
+            Des projets concrets menés avec rigueur : architecture, technologies réelles et contributions vérifiables.
+          </p>
+        </div>
+
+        <!-- PROJET 1 : SANTÉ TÉRANGA (PROJET PRINCIPAL) -->
+        <article class="project project-featured reveal">
+          <div class="project-visual sante-cover">
+            <div class="sante-top">
+              <span class="sante-badge" data-fr="Projet phare · PFE 2026" data-en="Featured Capstone · 2026">Projet
+                phare · PFE 2026</span>
+              <span class="sante-note" data-fr="Soutenance validée<br>Mention « Excellent »"
+                data-en="Defence passed<br>Highest Honours">Soutenance validée<br>Mention « Excellent »</span>
+            </div>
+
+            <div class="sante-art" aria-hidden="true">
+              <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="150" stroke="rgba(163,255,95,.18)" stroke-width="1" />
+                <circle cx="200" cy="200" r="112" stroke="rgba(163,255,95,.30)" stroke-width="1" />
+                <circle cx="200" cy="200" r="72" fill="rgba(163,255,95,.055)" stroke="rgba(163,255,95,.46)"
+                  stroke-width="1" />
+                <path d="M200 118c-30 24-32 58-2 80 30-20 32-54 2-80Z" fill="rgba(163,255,95,.55)" />
+                <path d="M228 168c26 2 44 20 46 46-26 2-44-16-46-46Z" fill="rgba(112,230,207,.38)" />
+                <path d="M142 216h36l12-22 18 44 14-30h36" stroke="#a3ff5f" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="200" cy="200" r="4" fill="#a3ff5f" />
+                <path d="M200 48v14M200 338v14M48 200h14M338 200h14" stroke="rgba(163,255,95,.45)" stroke-width="1"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <div class="sante-copy">
+              <span class="kicker" data-fr="HealthTech · Télésanté &amp; Nutrition"
+                data-en="HealthTech · Telehealth &amp; Nutrition">HealthTech · Télésanté &amp; Nutrition</span>
+              <strong>Santé Téranga</strong>
+              <span class="sub" data-fr="Suivi nutritionnel · Recommandations locales · <b>Connectivité adaptée</b>"
+                data-en="Nutritional follow-up · Local recommendations · <b>Offline-resilient</b>">Suivi nutritionnel ·
+                Recommandations locales · <b>Connectivité adaptée</b></span>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <p class="project-kicker"><span data-fr="Projet principal" data-en="Primary project">Projet
+                principal</span><span class="sep">·</span><span data-fr="Soutenance 2026 · Mention « Excellent »"
+                data-en="2026 Defence · Highest Honours">Soutenance 2026 · Mention « Excellent »</span></p>
+            <h3>Santé Téranga</h3>
+            <p class="project-lead"
+              data-fr="Plateforme de télésanté et de suivi nutritionnel destinée aux populations des zones rurales et mal desservies au Sénégal."
+              data-en="Telehealth and nutritional monitoring platform designed for rural and underserved communities in Senegal.">
+              Plateforme de télésanté et de suivi nutritionnel destinée aux populations des zones rurales et mal
+              desservies au Sénégal.</p>
+
+            <h4 data-fr="Fonctionnalités et contributions" data-en="Features and contributions">Fonctionnalités et
+              contributions</h4>
+            <ul class="feature-list">
+              <li data-fr="Participation à la conception et au développement frontend et backend"
+                data-en="Contribution to frontend and backend design and development">Participation à la conception et
+                au développement frontend et backend</li>
+              <li data-fr="Contribution à l'architecture technique globale de la solution"
+                data-en="Contribution to the overall technical system architecture">Contribution à l'architecture
+                technique globale de la solution</li>
+              <li data-fr="Développement des fonctionnalités clés de la plateforme"
+                data-en="Development of core platform features and services">Développement des fonctionnalités clés de
+                la plateforme</li>
+              <li
+                data-fr="Mise en place d'un système de recommandations nutritionnelles basé sur les aliments locaux, le profil et les besoins des utilisateurs"
+                data-en="Implementation of a nutritional recommendation engine based on local foods, user profiles, and specific needs">
+                Mise en place d'un système de recommandations nutritionnelles basé sur les aliments locaux, le profil et
+                les besoins des utilisateurs</li>
+              <li data-fr="Prise en compte des contraintes réelles de connectivité"
+                data-en="Built to accommodate low and intermittent connectivity constraints">Prise en compte des
+                contraintes réelles de connectivité</li>
             </ul>
+
+            <h4 data-fr="Stack technique" data-en="Tech stack">Stack technique</h4>
+            <div class="tags">
+              <span class="tag">React.js</span>
+              <span class="tag">NestJS</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Prisma ORM</span>
+            </div>
+
+            <div class="project-actions">
+              <span class="project-note"><svg class="icon" aria-hidden="true">
+                  <use href="#i-lock" />
+                </svg><span data-fr="Projet académique de fin d'études — dépôt privé"
+                  data-en="Academic capstone project — private repository">Projet académique de fin d'études — dépôt
+                  privé</span></span>
+            </div>
+          </div>
+        </article>
+        <!-- AUTRES PROJETS INFORMATIQUES (RENDEZ-VOUS MÉDICAUX, GESTION IMMOBILIÈRE, BIBLIOTHÈQUE) -->
+        <div class="more-projects reveal">
+          <div class="eyebrow" data-fr="Autres réalisations" data-en="Other builds">Autres réalisations</div>
+          <h3 style="font-size:clamp(22px,3vw,30px);margin:0 0 8px;font-weight:800;"
+            data-fr="Applications web &amp; logicielles" data-en="Web &amp; software applications">Applications web
+            &amp; logicielles</h3>
+          <p class="lead" data-fr="Développements frontend, backend et logiciels avec différentes technologies."
+            data-en="Frontend, backend and desktop software built with various tech stacks.">Développements frontend,
+            backend et logiciels avec différentes technologies.</p>
+
+          <div class="projects-cards-grid">
+            <!-- PROJET 2 : GESTION DE RENDEZ-VOUS MÉDICAUX -->
+            <article class="project-card-item">
+              <div class="card-top">
+                <span class="card-badge">Full Stack</span>
+                <span style="font-size:11px;font-family:var(--font-mono);color:var(--muted-2);">React / NestJS</span>
+              </div>
+              <h3 data-fr="Gestion de rendez-vous médicaux" data-en="Medical appointment management">Gestion de
+                rendez-vous médicaux</h3>
+              <p data-fr="Conception d'une application web de gestion des rendez-vous médicaux avec développement complet frontend et backend, planification d'agendas et authentification sécurisée par JWT."
+                data-en="Design and full stack development of a medical appointment management web app, featuring agenda scheduling and secure JWT authentication.">
+                Conception d'une application web de gestion des rendez-vous médicaux avec développement complet frontend
+                et backend, planification d'agendas et authentification sécurisée par JWT.</p>
+              <div class="tags">
+                <span class="tag">React.js</span>
+                <span class="tag">NestJS</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">JWT</span>
+              </div>
+            </article>
+
+            <!-- PROJET 3 : SYSTÈME DE GESTION IMMOBILIÈRE -->
+            <article class="project-card-item">
+              <div class="card-top">
+                <span class="card-badge">Web &amp; Documents</span>
+                <span style="font-size:11px;font-family:var(--font-mono);color:var(--muted-2);">PHP / MySQL</span>
+              </div>
+              <h3 data-fr="Système de gestion immobilière" data-en="Real estate management system">Système de gestion
+                immobilière</h3>
+              <p data-fr="Application de gestion des informations immobilières avec administration des biens, gestion des contrats et génération automatisée de documents et rapports PDF via FPDF."
+                data-en="Real estate information management application with property records, contract workflows, and automated PDF document generation using FPDF.">
+                Application de gestion des informations immobilières avec administration des biens, gestion des contrats
+                et génération automatisée de documents et rapports PDF via FPDF.</p>
+              <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">FPDF</span>
+              </div>
+            </article>
+
+            <!-- PROJET 4 : APPLICATION DE GESTION DE BIBLIOTHÈQUE -->
+            <article class="project-card-item">
+              <div class="card-top">
+                <span class="card-badge">Desktop</span>
+                <span style="font-size:11px;font-family:var(--font-mono);color:var(--muted-2);">Java GUI</span>
+              </div>
+              <h3 data-fr="Application de gestion de bibliothèque" data-en="Library management application">Application
+                de gestion de bibliothèque</h3>
+              <p data-fr="Développement d'une application desktop de gestion de bibliothèque avec interface graphique interactive permettant le catalogage, la gestion des emprunts et le suivi des adhérents."
+                data-en="Desktop library management system with an interactive graphical interface for book cataloguing, loan tracking, and member management.">
+                Développement d'une application desktop de gestion de bibliothèque avec interface graphique interactive
+                permettant le catalogage, la gestion des emprunts et le suivi des adhérents.</p>
+              <div class="tags">
+                <span class="tag">Java Swing</span>
+                <span class="tag">JavaFX</span>
+              </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section Expérience avec une timeline et animations -->
-    <section id="experience" class="py-20 bg-gray-100 dark:bg-gray-900">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          Expérience
-        </h2>
-        <div class="max-w-3xl mx-auto relative">
-          <div
-            class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-orange-500 dark:bg-orange-400 opacity-50 hidden md:block"
-          ></div>
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">04 / <span data-fr="Expériences" data-en="Experience">Expériences</span></div>
+          <h2 data-fr="Expériences professionnelles<br><span class='accent'>sur le terrain.</span>"
+            data-en="Professional experiences<br><span class='accent'>in the field.</span>">Expériences
+            professionnelles<br><span class="accent">sur le terrain.</span></h2>
+          <p class="lead"
+            data-fr="Des stages techniques en entreprise qui ont forgé ma rigueur, mon sens du diagnostic et du support aux utilisateurs."
+            data-en="Technical internships in a structured IT environment, strengthening my troubleshooting skills, user support and rigour.">
+            Des stages techniques en entreprise qui ont forgé ma rigueur, mon sens du diagnostic et du support aux
+            utilisateurs.</p>
+        </div>
 
-          <div
-            class="mb-12 flex flex-col md:flex-row items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            <div class="md:w-1/2 md:order-2 text-left">
-              <h3
-                class="text-xl font-semibold text-gray-800 dark:text-gray-100"
-              >
-                Projet Académique - Consultation Médicale
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">
-                20 Février 2025 - 05 Mars 2025
-              </p>
-              <p class="text-gray-700 dark:text-gray-200 mt-2">
-                Conception et mise en place d’une application web de prise de
-                rendez-vous pour consultations médicales, développée dans le
-                cadre d’un projet universitaire.
-              </p>
-              <ul
-                class="list-disc list-inside text-gray-700 dark:text-gray-200 mt-2 text-sm"
-              >
-                <li>
-                  Utilisation de HTML, CSS et JavaScript pour l’interface
-                  utilisateur.
-                </li>
-                <li>
-                  Intégration d’une base de données pour gérer les rendez-vous.
-                </li>
-                <li>
-                  Test et validation des fonctionnalités avec des utilisateurs
-                  fictifs.
-                </li>
-              </ul>
-            </div>
-            <div class="md:w-1/2 md:order-1 flex justify-center md:justify-end">
-              <div
-                class="w-4 h-4 bg-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block"
-              ></div>
-              <img
-                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-                loading="lazy"
-                alt="Aperçu de l’application web de prise de rendez-vous médicaux"
-                class="w-24 h-24 rounded-full border-2 border-orange-500 shadow-md"
-              />
-            </div>
-          </div>
+        <div class="timeline">
+          <!-- 2025 -->
+          <article class="entry reveal">
+            <div class="date" data-fr="Mars – Avril 2025" data-en="March – April 2025">Mars – Avril 2025</div>
+            <h3 data-fr="Stagiaire Réseaux et Systèmes" data-en="Networks and Systems Intern">Stagiaire Réseaux et
+              Systèmes</h3>
+            <p class="company">Tout en Génie Informatique (TGI) · Dakar, Sénégal</p>
+            <ul>
+              <li data-fr="Configuration et administration de réseaux et de systèmes informatiques."
+                data-en="Configuration and administration of computer networks and systems.">Configuration et
+                administration de réseaux et de systèmes informatiques.</li>
+              <li data-fr="Mise en place et gestion de services réseau."
+                data-en="Implementation and management of core network services.">Mise en place et gestion de services
+                réseau.</li>
+              <li data-fr="Diagnostic et résolution des incidents techniques."
+                data-en="Diagnosis and resolution of technical incidents.">Diagnostic et résolution des incidents
+                techniques.</li>
+              <li data-fr="Assistance technique et support aux utilisateurs."
+                data-en="Technical assistance and user support.">Assistance technique et support aux utilisateurs.</li>
+            </ul>
+          </article>
 
-          <div
-            class="mb-12 flex flex-col md:flex-row-reverse items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="200"
-          >
-            <div class="md:w-1/2 md:order-1 text-left">
-              <h3
-                class="text-xl font-semibold text-gray-800 dark:text-gray-100"
-              >
-                Projet Académique - Gestion de Bibliothèque
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">
-                25 Janvier 2025 - 24 Février 2025
-              </p>
-              <p class="text-gray-700 dark:text-gray-200 mt-2">
-                Développement d’un système de gestion de bibliothèque en Java
-                pour un projet universitaire, permettant le suivi des livres et
-                des emprunts.
-              </p>
-              <ul
-                class="list-disc list-inside text-gray-700 dark:text-gray-200 mt-2 text-sm"
-              >
-                <li>
-                  Programmation orientée objet en Java pour la logique métier.
-                </li>
-                <li>
-                  Utilisation d’une base de données SQLite pour stocker les
-                  informations.
-                </li>
-                <li>
-                  Interface console simple pour tester les fonctionnalités.
-                </li>
-              </ul>
-            </div>
-            <div
-              class="md:w-1/2 md:order-2 flex justify-center md:justify-start"
-            >
-              <div
-                class="w-4 h-4 bg-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block"
-              ></div>
-              <img
-                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-                loading="lazy"
-                alt="Vue d’une bibliothèque avec des étagères remplies de livres"
-                class="w-24 h-24 rounded-full border-2 border-orange-500 shadow-md"
-              />
-            </div>
-          </div>
-
-          <div
-            class="mb-12 flex flex-col md:flex-row items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="400"
-          >
-            <div class="md:w-1/2 md:order-2 text-left">
-              <h3
-                class="text-xl font-semibold text-gray-800 dark:text-gray-100"
-              >
-                Stage - TGI
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">
-                Juin 2024 - Août 2024
-              </p>
-              <p class="text-gray-700 dark:text-gray-200 mt-2">
-                Stage chez TGI (Technologies et Gestion Informatique) pour
-                assister dans le développement et la maintenance de solutions
-                informatiques pour l’entreprise.
-              </p>
-              <ul
-                class="list-disc list-inside text-gray-700 dark:text-gray-200 mt-2 text-sm"
-              >
-                <li>Participation à la maintenance de sites web internes.</li>
-                <li>
-                  Support technique et résolution de bugs dans des applications
-                  existantes.
-                </li>
-                <li>
-                  Collaboration avec l’équipe pour tester et déployer des mises
-                  à jour.
-                </li>
-              </ul>
-            </div>
-            <div class="md:w-1/2 md:order-1 flex justify-center md:justify-end">
-              <div
-                class="w-4 h-4 bg-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block"
-              ></div>
-              <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-                loading="lazy"
-                alt="Environnement de travail informatique chez TGI"
-                class="w-24 h-24 rounded-full border-2 border-orange-500 shadow-md"
-              />
-            </div>
-          </div>
-
-          <div
-            class="mb-12 flex flex-col md:flex-row-reverse items-center md:items-start gap-6 relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="600"
-          >
-            <div class="md:w-1/2 md:order-1 text-left">
-              <h3
-                class="text-xl font-semibold text-gray-800 dark:text-gray-100"
-              >
-                Début en Informatique
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">Été 2023</p>
-              <p class="text-gray-700 dark:text-gray-200 mt-2">
-                Création de sites web simples avec HTML et CSS dans le cadre de
-                mes débuts en informatique à l’Université Professionnelle.
-              </p>
-              <ul
-                class="list-disc list-inside text-gray-700 dark:text-gray-200 mt-2 text-sm"
-              >
-                <li>
-                  Développement de pages statiques pour des projets personnels.
-                </li>
-                <li>
-                  Apprentissage des bases du design web et de la mise en page.
-                </li>
-                <li>
-                  Première expérience pratique avec la résolution de problèmes
-                  techniques.
-                </li>
-              </ul>
-            </div>
-            <div
-              class="md:w-1/2 md:order-2 flex justify-center md:justify-start"
-            >
-              <div
-                class="w-4 h-4 bg-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block"
-              ></div>
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-                loading="lazy"
-                alt="Exemple de site web simple créé avec HTML et CSS"
-                class="w-24 h-24 rounded-full border-2 border-orange-500 shadow-md"
-              />
-            </div>
-          </div>
+          <!-- 2024 -->
+          <article class="entry reveal">
+            <div class="date" data-fr="Mars – Avril 2024" data-en="March – April 2024">Mars – Avril 2024</div>
+            <h3 data-fr="Stagiaire en Maintenance Informatique" data-en="IT Maintenance Intern">Stagiaire en Maintenance
+              Informatique</h3>
+            <p class="company">Tout en Génie Informatique (TGI) · Dakar, Sénégal</p>
+            <ul>
+              <li data-fr="Maintenance préventive et corrective des équipements informatiques."
+                data-en="Preventive and corrective maintenance of computer hardware.">Maintenance préventive et
+                corrective des équipements informatiques.</li>
+              <li data-fr="Diagnostic et dépannage des problèmes matériels et logiciels."
+                data-en="Troubleshooting hardware and software issues.">Diagnostic et dépannage des problèmes matériels
+                et logiciels.</li>
+              <li data-fr="Assistance aux utilisateurs et résolution des incidents informatiques."
+                data-en="User assistance and resolution of IT incidents.">Assistance aux utilisateurs et résolution des
+                incidents informatiques.</li>
+              <li data-fr="Participation à la gestion du parc informatique."
+                data-en="Participation in IT asset management and inventory.">Participation à la gestion du parc
+                informatique.</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Section Compétences avec barres de progression animées -->
-    <section id="competences" class="py-20 bg-white dark:bg-gray-800">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          Mes Compétences
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="300"
-          >
-            <div class="flex justify-center space-x-4 mb-4">
-              <i class="fab fa-html5 text-4xl text-orange-600"></i>
-              <i class="fab fa-css3-alt text-4xl text-blue-600"></i>
-              <i class="fab fa-js text-4xl text-yellow-500"></i>
-              <i class="fab fa-react text-4xl text-cyan-500"></i>
-              <i class="fab fa-bootstrap text-4xl text-purple-600"></i>
-            </div>
-            <h3
-              class="text-xl font-semibold mb-3 text-center text-gray-800 dark:text-gray-100"
-            >
-              Développement Web
-            </h3>
-            <div
-              class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mb-3"
-            >
-              <div
-                class="bg-orange-500 h-2.5 rounded-full progress-bar"
-                style="width: 0"
-                data-width="80%"
-              ></div>
-            </div>
-            <p class="text-gray-700 dark:text-gray-200 text-center">
-              HTML, CSS, JavaScript, React, Bootstrap
+    <!-- EDUCATION & EXTRAS -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">05 / <span data-fr="Formation" data-en="Education">Formation</span></div>
+          <h2 data-fr="Formation académique<br><span class='accent'>&amp; centres d'intérêt.</span>"
+            data-en="Academic education<br><span class='accent'>&amp; interests.</span>">Formation académique<br><span
+              class="accent">&amp; centres d'intérêt.</span></h2>
+          <p class="lead"
+            data-fr="Un socle rigoureux en génie informatique complété par une spécialisation poussée en développement web."
+            data-en="A rigorous foundation in computer engineering complemented by focused web development expertise.">
+            Un socle rigoureux en génie informatique complété par une spécialisation poussée en développement web.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- UNIPRO -->
+          <article class="edu-card reveal">
+            <span class="status-pill" data-fr="Diplôme obtenu · Mention « Excellent »"
+              data-en="Degree awarded · Highest Honours">Diplôme obtenu · Mention « Excellent »</span>
+            <h3 data-fr="Licence en Génie Informatique" data-en="Bachelor's Degree in Computer Science">Licence en Génie
+              Informatique</h3>
+            <p class="specialty" data-fr="Spécialité Développement Web · 2023 – 2026"
+              data-en="Web Development Specialisation · 2023 – 2026">Spécialité Développement Web · 2023 – 2026</p>
+            <p class="place">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-pin" />
+              </svg>
+              <span>UNIPRO, Dakar · Sénégal</span>
             </p>
-          </div>
-          <div
-            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="500"
-          >
-            <div class="flex justify-center space-x-4 mb-4">
-              <i class="fab fa-python text-4xl text-blue-700"></i>
-              <i class="fab fa-java text-4xl text-orange-700"></i>
-              <i class="fab fa-php text-4xl text-indigo-600"></i>
-              <i class="fab fa-ruby text-4xl text-red-600"></i>
-              <i class="fas fa-code text-4xl text-gray-600"></i>
+
+            <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--line);">
+              <h4 style="margin:0 0 4px;font-size:15px;color:var(--text);font-weight:700;" data-fr="Baccalauréat"
+                data-en="Baccalaureate">Baccalauréat</h4>
+              <p style="margin:0;color:var(--muted);font-size:13.5px;">La Sagesse · 2021</p>
             </div>
-            <h3
-              class="text-xl font-semibold mb-3 text-center text-gray-800 dark:text-gray-100"
-            >
-              Langages
-            </h3>
-            <div
-              class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mb-3"
-            >
-              <div
-                class="bg-orange-500 h-2.5 rounded-full progress-bar"
-                style="width: 0"
-                data-width="70%"
-              ></div>
+          </article>
+
+          <!-- LANGUES & INTÉRÊTS -->
+          <article class="edu-card reveal">
+            <h4><svg class="icon" aria-hidden="true">
+                <use href="#i-target" />
+              </svg><span data-fr="Langues &amp; Objectifs" data-en="Languages &amp; Goals">Langues &amp;
+                Objectifs</span></h4>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;">
+              <div style="padding:12px;border:1px solid var(--line);border-radius:12px;background:#090d14;">
+                <strong style="display:block;color:var(--text);font-size:13px;" data-fr="Français"
+                  data-en="French">Français</strong>
+                <span style="color:var(--accent);font-size:12px;font-family:var(--font-mono);" data-fr="Bonne maîtrise"
+                  data-en="Fluent">Bonne maîtrise</span>
+              </div>
+              <div style="padding:12px;border:1px solid var(--line);border-radius:12px;background:#090d14;">
+                <strong style="display:block;color:var(--text);font-size:13px;" data-fr="Anglais"
+                  data-en="English">Anglais</strong>
+                <span style="color:var(--muted);font-size:12px;font-family:var(--font-mono);"
+                  data-fr="Niveau intermédiaire" data-en="Intermediate">Niveau intermédiaire</span>
+              </div>
             </div>
-            <p class="text-gray-700 dark:text-gray-200 text-center">
-              Python, Java, PHP, Ruby, C/C++
-            </p>
-          </div>
-          <div
-            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="700"
-          >
-            <div class="flex justify-center space-x-4 mb-4">
-              <i class="fas fa-database text-4xl text-teal-600"></i>
-              <i class="fas fa-server text-4xl text-gray-600"></i>
+
+            <h4><span data-fr="Centres d'intérêt" data-en="Interests">Centres d'intérêt</span></h4>
+            <div class="interests-grid">
+              <div class="interest-pill" data-fr="Intelligence artificielle &amp; nouvelles technologies"
+                data-en="Artificial intelligence &amp; emerging tech">Intelligence artificielle &amp; nouvelles
+                technologies</div>
+              <div class="interest-pill" data-fr="HealthTech &amp; transformation numérique"
+                data-en="HealthTech &amp; digital transformation">HealthTech &amp; transformation numérique</div>
+              <div class="interest-pill" data-fr="Solutions numériques à impact social"
+                data-en="Digital solutions with social impact">Solutions numériques à impact social</div>
+              <div class="interest-pill" data-fr="Innovation &amp; apprentissage continu"
+                data-en="Innovation &amp; continuous learning">Innovation &amp; apprentissage continu</div>
             </div>
-            <h3
-              class="text-xl font-semibold mb-3 text-center text-gray-800 dark:text-gray-100"
-            >
-              Bases de Données
-            </h3>
-            <div
-              class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mb-3"
-            >
-              <div
-                class="bg-orange-500 h-2.5 rounded-full progress-bar"
-                style="width: 0"
-                data-width="60%"
-              ></div>
-            </div>
-            <p class="text-gray-700 dark:text-gray-200 text-center">
-              MySQL, MongoDB, PostgreSQL, SQLite
-            </p>
-          </div>
-          <div
-            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="900"
-          >
-            <div class="flex justify-center space-x-4 mb-4">
-              <i class="fab fa-figma text-4xl text-orange-500"></i>
-              <i class="fab fa-adobe text-4xl text-red-600"></i>
-              <i class="fab fa-sketch text-4xl text-yellow-600"></i>
-              <i class="fab fa-invision text-4xl text-pink-600"></i>
-            </div>
-            <h3
-              class="text-xl font-semibold mb-3 text-center text-gray-800 dark:text-gray-100"
-            >
-              Web Design
-            </h3>
-            <div
-              class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 mb-3"
-            >
-              <div
-                class="bg-orange-500 h-2.5 rounded-full progress-bar"
-                style="width: 0"
-                data-width="75%"
-              ></div>
-            </div>
-            <p class="text-gray-700 dark:text-gray-200 text-center">
-              Figma, Adobe XD, Sketch, InVision
-            </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Section Projets avec filtre et animations -->
-    <section id="projets" class="py-20 bg-gray-100 dark:bg-gray-900">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          Mes Projets
-        </h2>
-        <div class="flex justify-center gap-4 mb-8 flex-wrap">
-          <button
-            class="filter-btn bg-orange-500 text-white px-4 py-2 rounded-full"
-            data-filter="all"
-          >
-            Tous
-          </button>
-          <button
-            class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
-            data-filter="web"
-          >
-            Web
-          </button>
-          <button
-            class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
-            data-filter="data"
-          >
-            Data
-          </button>
-          <button
-            class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
-            data-filter="modelisation"
-          >
-            Modélisation
-          </button>
-          <button
-            class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full"
-            data-filter="portfolio"
-          >
-            Portfolio
-          </button>
-        </div>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 projets"
-        >
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 data"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="300"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-              loading="lazy"
-              alt="Capture d’écran du projet de recensement de la population sénégalaise avec MySQL"
-              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
-              data-aos="zoom-in"
-            />
-            <h3
-              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
-            >
-              Recensement
-            </h3>
-            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
-              Gestion des données de recensement avec MySQL.
-            </p>
-            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
-              Ce projet consiste en une base de données pour le recensement de
-              la population sénégalaise...
-            </p>
-            <button
-              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
-            >
-              Voir plus
-            </button>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact-box reveal">
+          <div>
+            <div class="eyebrow">06 / Contact</div>
+            <h2 data-fr="Une opportunité, un projet,<br><span class='accent'>une collaboration ?</span>"
+              data-en="An opportunity, a project,<br><span class='accent'>a collaboration?</span>">Une opportunité, un
+              projet,<br><span class="accent">une collaboration ?</span></h2>
+            <p class="lead"
+              data-fr="Je suis à l'écoute d'opportunités de stage, d'emploi junior et de projets collaboratifs. Discutons-en dès aujourd'hui."
+              data-en="I am open to internship opportunities, junior positions and collaborative projects. Let's get in touch today.">
+              Je suis à l'écoute d'opportunités de stage, d'emploi junior et de projets collaboratifs. Discutons-en dès
+              aujourd'hui.</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-phone" />
+                </svg>
+                <div>
+                  <strong data-fr="Téléphone" data-en="Phone">Téléphone</strong>
+                  <a href="tel:+221772309246">+221 77 230 92 46</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-mail" />
+                </svg>
+                <div>
+                  <strong data-fr="Email" data-en="Email">Email</strong>
+                  <a href="mailto:ismaizo234@gmail.com">ismaizo234@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-pin" />
+                </svg>
+                <div>
+                  <strong data-fr="Localisation" data-en="Location">Localisation</strong>
+                  <span data-fr="Rufisque – Dakar, Sénégal" data-en="Rufisque – Dakar, Senegal">Rufisque – Dakar,
+                    Sénégal</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg>
+                <div>
+                  <strong data-fr="Disponibilité" data-en="Availability">Disponibilité</strong>
+                  <span data-fr="Stage, poste junior ou collaboration"
+                    data-en="Internship, junior role or collaboration">Stage, poste junior ou collaboration</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 modelisation"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="500"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-              loading="lazy"
-              alt="Diagramme UML du système de stationnement intelligent"
-              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
-              data-aos="zoom-in"
-            />
-            <h3
-              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
-            >
-              Stationnement
-            </h3>
-            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
-              Modélisation UML d’un système de stationnement.
-            </p>
-            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
-              Ce projet implique la modélisation UML d’un système de
-              stationnement intelligent...
-            </p>
-            <button
-              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
-            >
-              Voir plus
-            </button>
-          </div>
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 web"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="700"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-              loading="lazy"
-              alt="Interface de l’application web de calculatrice en JavaScript"
-              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
-              data-aos="zoom-in"
-            />
-            <h3
-              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
-            >
-              Calculatrice JS
-            </h3>
-            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
-              Application de calculs mathématiques en JavaScript.
-            </p>
-            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
-              Cette application web permet aux utilisateurs de réaliser des
-              calculs mathématiques complexes...
-            </p>
-            <button
-              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
-            >
-              Voir plus
-            </button>
-          </div>
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 data"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="900"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-              loading="lazy"
-              alt="Interface de gestion des véhicules développée en Java"
-              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
-              data-aos="zoom-in"
-            />
-            <h3
-              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
-            >
-              Gestion Véhicules
-            </h3>
-            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
-              Application Java pour gérer des véhicules.
-            </p>
-            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
-              Ce projet est une application Java conçue pour gérer les
-              informations des véhicules...
-            </p>
-            <button
-              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
-            >
-              Voir plus
-            </button>
-          </div>
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 portfolio web"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="1100"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-              loading="lazy"
-              alt="Première version du portfolio personnel avec animations AOS"
-              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
-              data-aos="zoom-in"
-            />
-            <h3
-              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
-            >
-              Portfolio Initial
-            </h3>
-            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
-              Création d’un portfolio personnel avec HTML/CSS.
-            </p>
-            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
-              Collaboration pour concevoir une première version de portfolio
-              avec HTML, CSS et AOS...
-            </p>
-            <button
-              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
-            >
-              Voir plus
-            </button>
-          </div>
-          <div
-            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 portfolio web"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="1300"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-              loading="lazy"
-              alt="Portfolio amélioré avec Tailwind CSS et mode sombre"
-              class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
-              data-aos="zoom-in"
-            />
-            <h3
-              class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"
-            >
-              Portfolio Tailwind
-            </h3>
-            <p class="text-gray-700 dark:text-gray-200 short-description mb-4">
-              Portfolio amélioré avec Tailwind CSS.
-            </p>
-            <p class="text-gray-700 dark:text-gray-200 full-description hidden">
-              Refonte du portfolio avec Tailwind CSS, ajout de filtres et mode
-              sombre...
-            </p>
-            <button
-              class="voir-plus bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
-            >
-              Voir plus
-            </button>
+
+          <div class="contact-side">
+            <div class="contact-actions">
+              <a class="btn btn-primary"
+                href="mailto:ismaizo234@gmail.com?subject=Opportunit%C3%A9%20%E2%80%94%20Portfolio%20Ismaila%20Keita">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-mail" />
+                </svg>
+                <span data-fr="M'écrire par email" data-en="Send me an email">M'écrire par email</span>
+              </a>
+              <a class="btn btn-secondary" href="public/Ismaila%20Keita.pdf" download="Ismaila Keita.pdf">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-download" />
+                </svg>
+                <span data-fr="Télécharger mon CV" data-en="Download my CV">Télécharger mon CV</span>
+              </a>
+            </div>
+            <div class="contact-actions">
+              <a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/ismaila-keita-b0405525a/"
+                target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-linkedin" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/Ismaizo21" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-github" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+            <p class="footer-note" data-fr="Rufisque – Dakar, Sénégal · Fuseau GMT"
+              data-en="Rufisque – Dakar, Senegal · GMT timezone">Rufisque – Dakar, Sénégal · Fuseau GMT</p>
           </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- Section Témoignages avec carrousel manuel et animations -->
-    <section id="temoignages" class="py-20 bg-white dark:bg-gray-800">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          Témoignages
-        </h2>
-        <div class="relative">
-          <button
-            class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full z-10 hover:bg-orange-600"
-            aria-label="Témoignage précédent"
-          >
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <div
-            class="carousel flex overflow-x-auto snap-x snap-mandatory gap-6"
-          >
-            <div
-              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="300"
-            >
-              <p class="text-gray-700 dark:text-gray-200">
-                "Ismaila a livré un travail exceptionnel sur notre projet."
-              </p>
-              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
-                - Joseph Mbaye
-              </p>
-            </div>
-            <div
-              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="400"
-            >
-              <p class="text-gray-700 dark:text-gray-200">
-                "Un développeur créatif et rigoureux."
-              </p>
-              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
-                - Mouhamed Sagna
-              </p>
-            </div>
-            <div
-              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="500"
-            >
-              <p class="text-gray-700 dark:text-gray-200">
-                "Son portfolio est impressionnant et bien conçu."
-              </p>
-              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
-                - Professeur Diop
-              </p>
-            </div>
-            <div
-              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="600"
-            >
-              <p class="text-gray-700 dark:text-gray-200">
-                "Toujours prêt à relever des défis techniques."
-              </p>
-              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
-                - Partenaire Cheikhouna
-              </p>
-            </div>
-            <div
-              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="700"
-            >
-              <p class="text-gray-700 dark:text-gray-200">
-                "Une collaboration fluide et productive."
-              </p>
-              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
-                - Coura Diop
-              </p>
-            </div>
-            <div
-              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="800"
-            >
-              <p class="text-gray-700 dark:text-gray-200">
-                "Compétences variées et approche innovante."
-              </p>
-              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
-                - Astou Louise Seck
-              </p>
-            </div>
-            <div
-              class="min-w-full snap-center bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg"
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="900"
-            >
-              <p class="text-gray-700 dark:text-gray-200">
-                "Un talent prometteur en développement."
-              </p>
-              <p class="mt-4 font-semibold text-gray-800 dark:text-gray-100">
-                - Professeur Soumare
-              </p>
-            </div>
-          </div>
-          <button
-            class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full z-10 hover:bg-orange-600"
-            aria-label="Témoignage suivant"
-          >
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Ismaila Keita. <span data-fr="Tous droits réservés."
+          data-en="All rights reserved.">Tous droits réservés.</span></span>
+      <div class="footer-links">
+        <a href="https://github.com/Ismaizo21" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/ismaila-keita-b0405525a/" target="_blank"
+          rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:ismaizo234@gmail.com">Email</a>
+        <a href="tel:+221772309246">+221 77 230 92 46</a>
+        <a href="#home" data-fr="Retour en haut" data-en="Back to top">Retour en haut</a>
       </div>
-    </section>
+      <span class="footer-note" data-fr="Développé par Ismaila Keita · HTML5, CSS3 &amp; JavaScript"
+        data-en="Built by Ismaila Keita · HTML5, CSS3 &amp; JavaScript">Développé par Ismaila Keita · HTML5, CSS3 &amp;
+        JavaScript</span>
+    </div>
+  </footer>
 
-    <!-- Section Contact avec formulaire multilingue et gestion des erreurs -->
-    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-900">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:w-24 after:h-1 after:bg-orange-500"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          <span id="titre-contact"></span>
-          <!-- Titre traduit dynamiquement -->
-        </h2>
-        <div class="text-center mb-6">
-          <!-- Bouton pour basculer entre français et anglais -->
-          <button
-            id="lang-toggle"
-            class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
-          >
-            Français / English
-          </button>
-        </div>
-        <form
-          id="contact-form"
-          class="max-w-lg mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-delay="300"
-        >
-          <div class="mb-6">
-            <label
-              for="nom"
-              class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
-              id="label-nom"
-              <!--
-              Label
-              pour
-              le
-              champ
-              Nom
-              --
-            >
-              ></label
-            >
-            <input
-              type="text"
-              id="nom"
-              name="nom"
-              required
-              placeholder="Votre nom / Your name"
-              class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors dark:bg-gray-700 dark:text-gray-200"
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="email"
-              class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
-              id="label-email"
-              <!--
-              Label
-              pour
-              le
-              champ
-              Email
-              --
-            >
-              ></label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="Votre email / Your email"
-              class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors dark:bg-gray-700 dark:text-gray-200"
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="message"
-              class="block text-gray-700 dark:text-gray-200 font-semibold mb-2"
-              id="label-message"
-              <!--
-              Label
-              pour
-              le
-              champ
-              Message
-              --
-            >
-              ></label
-            >
-            <textarea
-              id="message"
-              name="message"
-              required
-              placeholder="Votre message / Your message"
-              class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-500 transition-colors h-32 resize-none dark:bg-gray-700 dark:text-gray-200"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2"
-          >
-            <i class="fas fa-paper-plane"></i>
-            <span id="bouton-envoyer"></span>
-            <!-- Texte du bouton traduit dynamiquement -->
-          </button>
-          <p id="form-status" class="text-center mt-4 hidden"></p>
-          <!-- Message de statut (succès/erreur) -->
-        </form>
-      </div>
-    </section>
+  <script>
+    (function () {
+      'use strict';
 
-    <!-- Footer avec liens vers les réseaux sociaux -->
-    <footer
-      class="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-12 text-center"
-    >
-      <div class="container mx-auto px-6">
-        <div
-          class="flex justify-center space-x-8 mb-6"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-delay="500"
-        >
-          <a
-            href="https://github.com/Ismaizo21"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-3xl hover:text-gray-200 transition-colors"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/ismaila-keita-b0405525a/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-3xl hover:text-gray-200 transition-colors"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/__izo_k__"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-3xl hover:text-gray-200 transition-colors"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="https://x.com/izo_keita"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-3xl hover:text-gray-200 transition-colors"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </div>
-        <p class="text-sm">© 2025 Ismaila Keita. Tous droits réservés.</p>
-      </div>
-    </footer>
+      var root = document.documentElement;
+      var STORAGE_KEY = 'portfolio-lang';
+      var lang = 'fr';
 
-    <!-- Scripts externes pour les animations, particules, et fonctionnalités -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      // Initialisation d'EmailJS avec ton User ID
-      (function () {
-        emailjs.init("vumHFWqyw0SWXaPKP"); // Remplace par ton User ID EmailJS si nécessaire
-      })();
-
-      // Initialisation des animations AOS (Animate On Scroll)
-      AOS.init({ once: true, offset: 100 }); // Les animations n'apparaissent qu'une fois et décallées pour un effet fluide
-
-      // Initialisation de i18next pour la gestion multilingue
-      i18next.use(i18nextBrowserLanguageDetector).init(
-        {
-          fallbackLng: "fr", // Langue par défaut si aucune n'est détectée
-          resources: {
-            fr: { translation: window.frTranslation }, // Traductions françaises chargées depuis le fichier JSON
-            en: { translation: window.enTranslation }, // Traductions anglaises chargées depuis le fichier JSON
-          },
+      var meta = {
+        fr: {
+          title: 'Ismaila Keita — Développeur Full Stack',
+          description: "Portfolio d'Ismaila Keita, Développeur Full Stack à Rufisque – Dakar, Sénégal. React.js, NestJS, PostgreSQL, Prisma. Projets, compétences, expériences et contact.",
+          ogDescription: "Développeur Full Stack diplômé en Génie Informatique. React.js, NestJS, PostgreSQL. Découvrez mes réalisations et contactez-moi.",
+          twitterDescription: "Développeur Full Stack diplômé en Génie Informatique. React.js, NestJS, PostgreSQL.",
+          imageAlt: "Ismaila Keita, Développeur Full Stack à Rufisque – Dakar, Sénégal",
+          locale: 'fr_FR',
+          alternateLocale: 'en_US'
         },
-        (err) => {
-          if (err)
-            console.error("Erreur lors de l'initialisation d'i18next:", err);
-          updateTranslations(); // Applique les traductions après initialisation
+        en: {
+          title: 'Ismaila Keita — Full Stack Developer',
+          description: "Portfolio of Ismaila Keita, Full Stack Developer based in Rufisque – Dakar, Senegal. React.js, NestJS, PostgreSQL, Prisma. Projects, skills, experience and contact.",
+          ogDescription: "Full Stack Developer holding a BSc in Computer Science. React.js, NestJS, PostgreSQL. Explore my projects and contact me.",
+          twitterDescription: "Full Stack Developer holding a BSc in Computer Science. React.js, NestJS, PostgreSQL.",
+          imageAlt: "Ismaila Keita, Full Stack Developer based in Rufisque – Dakar, Senegal",
+          locale: 'en_US',
+          alternateLocale: 'fr_FR'
         }
-      );
+      };
 
-      // Fonction pour mettre à jour les textes traduits dans le DOM
-      function updateTranslations() {
-        const elements = {
-          "titre-contact": "Contact", // Titre de la section Contact
-          "label-nom": "Nom", // Label pour le champ Nom
-          "label-email": "Email", // Label pour le champ Email
-          "label-message": "Message", // Label pour le champ Message
-          "bouton-envoyer": "Envoyer", // Texte du bouton d'envoi
+      var menuLabels = {
+        fr: { open: 'Ouvrir le menu', close: 'Fermer le menu' },
+        en: { open: 'Open menu', close: 'Close menu' }
+      };
+
+      var nav = document.getElementById('primary-nav');
+      var menuToggle = document.getElementById('menu-toggle');
+      var menuOpen = false;
+      var desktopQuery = window.matchMedia('(min-width: 900px)');
+
+      function updateMenuLabel() {
+        if (!menuToggle) return;
+        menuToggle.setAttribute('aria-label', menuLabels[lang][menuOpen ? 'close' : 'open']);
+      }
+
+      function setMenu(open, returnFocus) {
+        if (!nav || !menuToggle) return;
+        menuOpen = open;
+        nav.classList.toggle('open', open);
+        menuToggle.setAttribute('aria-expanded', String(open));
+        updateMenuLabel();
+        if (open) {
+          var firstLink = nav.querySelector('a');
+          if (firstLink) firstLink.focus();
+        } else if (returnFocus) {
+          menuToggle.focus();
+        }
+      }
+
+      function applyLanguage(nextLang, persist) {
+        lang = nextLang === 'en' ? 'en' : 'fr';
+        root.lang = lang;
+
+        document.querySelectorAll('[data-fr][data-en]').forEach(function (el) {
+          var value = el.getAttribute('data-' + lang);
+          if (value !== null) el.innerHTML = value;
+        });
+
+        document.querySelectorAll('[data-aria-fr][data-aria-en]').forEach(function (el) {
+          var value = el.getAttribute('data-aria-' + lang);
+          if (value !== null) el.setAttribute('aria-label', value);
+        });
+
+        document.querySelectorAll('[data-alt-fr][data-alt-en]').forEach(function (el) {
+          var value = el.getAttribute('data-alt-' + lang);
+          if (value !== null) el.setAttribute('alt', value);
+        });
+
+        document.title = meta[lang].title;
+        var description = document.querySelector('meta[name="description"]');
+        if (description) description.setAttribute('content', meta[lang].description);
+
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        var ogDescription = document.querySelector('meta[property="og:description"]');
+        var ogLocale = document.querySelector('meta[property="og:locale"]');
+        var ogLocaleAlt = document.querySelector('meta[property="og:locale:alternate"]');
+        var ogImageAlt = document.querySelector('meta[property="og:image:alt"]');
+        var twitterTitle = document.querySelector('meta[name="twitter:title"]');
+        var twitterDescription = document.querySelector('meta[name="twitter:description"]');
+        var twitterImageAlt = document.querySelector('meta[name="twitter:image:alt"]');
+        if (ogTitle) ogTitle.setAttribute('content', meta[lang].title);
+        if (ogDescription) ogDescription.setAttribute('content', meta[lang].ogDescription);
+        if (ogLocale) ogLocale.setAttribute('content', meta[lang].locale);
+        if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', meta[lang].alternateLocale);
+        if (ogImageAlt) ogImageAlt.setAttribute('content', meta[lang].imageAlt);
+        if (twitterTitle) twitterTitle.setAttribute('content', meta[lang].title);
+        if (twitterDescription) twitterDescription.setAttribute('content', meta[lang].twitterDescription);
+        if (twitterImageAlt) twitterImageAlt.setAttribute('content', meta[lang].imageAlt);
+
+        document.querySelectorAll('.lang-switch button').forEach(function (button) {
+          button.setAttribute('aria-pressed', String(button.getAttribute('data-lang') === lang));
+        });
+
+        updateMenuLabel();
+
+        if (persist) {
+          try { localStorage.setItem(STORAGE_KEY, lang); } catch (error) { }
+        }
+      }
+
+      try {
+        var saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'en' || saved === 'fr') lang = saved;
+      } catch (error) { }
+
+      document.querySelectorAll('.lang-switch button').forEach(function (button) {
+        button.addEventListener('click', function () {
+          applyLanguage(button.getAttribute('data-lang'), true);
+        });
+      });
+
+      applyLanguage(lang, false);
+
+      if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function () {
+          setMenu(!menuOpen, false);
+        });
+
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (menuOpen) setMenu(false, false);
+          });
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && menuOpen) setMenu(false, true);
+        });
+
+        document.addEventListener('click', function (event) {
+          if (menuOpen && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
+            setMenu(false, false);
+          }
+        });
+
+        var handleDesktopChange = function (event) {
+          if (event.matches) setMenu(false, false);
         };
-        Object.keys(elements).forEach((id) => {
-          const el = document.getElementById(id);
-          if (el) el.textContent = i18next.t(elements[id]); // Applique la traduction si l'élément existe
-        });
-
-        // Met à jour le message de statut du formulaire si visible
-        const formStatus = document.getElementById("form-status");
-        if (formStatus && !formStatus.classList.contains("hidden")) {
-          formStatus.textContent = i18next.t(
-            formStatus.classList.contains("text-green-500")
-              ? "Succes"
-              : "Erreur"
-          );
+        if (typeof desktopQuery.addEventListener === 'function') {
+          desktopQuery.addEventListener('change', handleDesktopChange);
+        } else if (typeof desktopQuery.addListener === 'function') {
+          desktopQuery.addListener(handleDesktopChange);
         }
       }
 
-      // Gestion de la bascule entre français et anglais
-      const langToggle = document.getElementById("lang-toggle");
-      if (langToggle) {
-        langToggle.addEventListener("click", () => {
-          const newLang = i18next.language === "fr" ? "en" : "fr"; // Bascule entre "fr" et "en"
-          i18next.changeLanguage(newLang, () => updateTranslations()); // Met à jour les traductions
-          localStorage.setItem("lang", newLang); // Sauvegarde la préférence de langue
+      var year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      var reveals = document.querySelectorAll('.reveal');
+      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!reducedMotion && 'IntersectionObserver' in window) {
+        var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        reveals.forEach(function (el) {
+          var top = el.getBoundingClientRect().top;
+          if (top > viewportHeight * 0.9) el.classList.add('is-pending');
         });
-      }
 
-      // Gestion du chargement initial et du mode sombre
-      window.addEventListener("load", () => {
-        const preloader = document.getElementById("preloader"); // Élément de préchargement
-        if (preloader) preloader.classList.add("hidden"); // Cache le préloader une fois la page chargée
-
-        // Gestion du mode sombre avec détection automatique
-        const savedTheme = localStorage.getItem("theme"); // Récupère le thème sauvegardé
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches; // Préfère le mode sombre par défaut
-        const themeToggle = document.getElementById("theme-toggle"); // Bouton de bascule de thème
-        const themeIcon = themeToggle?.querySelector("i"); // Icône du bouton (lune/soleil)
-
-        // Applique le mode sombre si l'utilisateur préfère ou si sauvegardé
-        if (!savedTheme && prefersDark) {
-          document.documentElement.classList.add("dark"); // Active le mode sombre
-          if (themeToggle) {
-            themeToggle.classList.remove("bg-gray-200", "text-gray-700"); // Supprime les styles clairs
-            themeToggle.classList.add("bg-gray-700", "text-gray-200"); // Ajoute les styles sombres
-            if (themeIcon) {
-              themeIcon.classList.remove("fa-moon"); // Change l'icône en soleil
-              themeIcon.classList.add("fa-sun");
-            }
-          }
-        } else if (savedTheme === "dark") {
-          document.documentElement.classList.add("dark"); // Active le mode sombre si sauvegardé
-          if (themeToggle) {
-            themeToggle.classList.remove("bg-gray-200", "text-gray-700");
-            themeToggle.classList.add("bg-gray-700", "text-gray-200");
-            if (themeIcon) {
-              themeIcon.classList.remove("fa-moon");
-              themeIcon.classList.add("fa-sun");
-            }
-          }
-        }
-
-        // Gestion du clic sur le bouton de thème
-        if (themeToggle) {
-          themeToggle.addEventListener("click", () => {
-            document.documentElement.classList.toggle("dark"); // Bascule le mode sombre/clair
-            const isDark = document.documentElement.classList.contains("dark");
-            localStorage.setItem("theme", isDark ? "dark" : "light"); // Sauvegarde le thème
-            themeToggle.classList.toggle("bg-gray-200", !isDark); // Styles clairs si mode clair
-            themeToggle.classList.toggle("text-gray-700", !isDark);
-            themeToggle.classList.toggle("bg-gray-700", isDark); // Styles sombres si mode sombre
-            themeToggle.classList.toggle("text-gray-200", isDark);
-            if (themeIcon) {
-              themeIcon.classList.toggle("fa-moon", !isDark); // Icône lune pour mode clair
-              themeIcon.classList.toggle("fa-sun", isDark); // Icône soleil pour mode sombre
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
             }
           });
-        }
-      });
+        }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
 
-      // Initialisation des particules d'arrière-plan pour l'effet visuel
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 50 }, // Nombre de particules
-          color: { value: "#f97316" }, // Couleur orange des particules
-          shape: { type: "circle" }, // Forme des particules
-          opacity: { value: 0.5 }, // Opacité des particules
-          size: { value: 3 }, // Taille des particules
-          move: { speed: 2 }, // Vitesse de mouvement
-        },
-        interactivity: {
-          events: { onhover: { enable: true, mode: "repulse" } }, // Repousse les particules au survol
-        },
-      });
-
-      // Gestion du menu mobile
-      const menuToggle = document.getElementById("menu-toggle"); // Bouton pour ouvrir/fermer le menu
-      const mobileMenu = document.getElementById("mobile-menu"); // Menu mobile
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden"); // Affiche/cache le menu
-        });
-        document.querySelectorAll("#mobile-menu a").forEach((link) => {
-          link.addEventListener("click", () =>
-            // Ferme le menu mobile après un clic sur un lien
-            mobileMenu.classList.add("hidden")
-          );
-        });
+        reveals.forEach(function (el) { observer.observe(el); });
+        requestAnimationFrame(function () { root.classList.add('reveal-ready'); });
       }
 
-      // Animation des barres de progression des compétences au scroll
-      const progressBars = document.querySelectorAll(".progress-bar");
-      if (progressBars.length) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                progressBars.forEach((bar) => {
-                  bar.style.width = bar.getAttribute("data-width"); // Anime la largeur des barres
-                });
-                observer.disconnect(); // Arrête l'observation une fois l'animation déclenchée
-              }
-            });
-          },
-          { threshold: 0.5 } // Déclenche quand 50% de la section est visible
-        );
-        observer.observe(document.getElementById("competences"));
-      }
+      root.classList.remove('no-js');
+      root.classList.add('js');
+    }());
+  </script>
+</body>
 
-      // Gestion des filtres pour les projets
-      const filterButtons = document.querySelectorAll(".filter-btn"); // Boutons de filtre
-      const projects = document.querySelectorAll(".projets > div"); // Projets à filtrer
-      if (filterButtons.length && projects.length) {
-        filterButtons.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const filter = btn.getAttribute("data-filter"); // Récupère le filtre sélectionné
-            filterButtons.forEach(
-              (b) => b.classList.replace("bg-orange-500", "bg-gray-200") // Réinitialise les styles des boutons
-            );
-            btn.classList.replace("bg-gray-200", "bg-orange-500"); // Met en surbrillance le bouton actif
-            projects.forEach((project) => {
-              project.classList.toggle(
-                "hidden",
-                filter !== "all" && !project.classList.contains(filter) // Affiche/masque les projets selon le filtre
-              );
-            });
-          });
-        });
-      }
-
-      // Gestion des boutons "Voir plus" pour les descriptions des projets
-      const voirPlusButtons = document.querySelectorAll(".voir-plus");
-      if (voirPlusButtons.length) {
-        voirPlusButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const fullDesc = button.previousElementSibling; // Récupère la description complète
-            if (fullDesc) {
-              fullDesc.classList.toggle("hidden"); // Affiche/cache la description complète
-              button.textContent = fullDesc.classList.contains("hidden")
-                ? "Voir plus"
-                : "Voir moins"; // Change le texte du bouton
-            }
-          });
-        });
-      }
-
-      // Gestion du formulaire de contact avec EmailJS et traductions
-      const contactForm = document.getElementById("contact-form"); // Formulaire de contact
-      const formStatus = document.getElementById("form-status"); // Message de statut
-      if (contactForm && formStatus) {
-        contactForm.addEventListener("submit", (e) => {
-          e.preventDefault(); // Empêche le rechargement de la page
-          formStatus.classList.remove(
-            "hidden",
-            "text-green-500",
-            "text-red-500"
-          ); // Réinitialise le statut
-
-          emailjs
-            .sendForm(
-              "service_wy97h8g", // Service ID EmailJS
-              "template_mu4a4zl", // Template ID EmailJS
-              contactForm
-            )
-            .then(
-              () => {
-                formStatus.textContent = i18next.t("Succes"); // Message de succès traduit
-                formStatus.classList.add("text-green-500"); // Style vert pour succès
-                contactForm.reset(); // Réinitialise le formulaire
-                gtag("event", "form_submission", {
-                  event_category: "Contact",
-                  event_label: "Success", // Événement Google Analytics pour suivi
-                });
-              },
-              (error) => {
-                formStatus.textContent = i18next.t("Erreur"); // Message d'erreur traduit
-                formStatus.classList.add("text-red-500"); // Style rouge pour erreur
-                console.error("Erreur EmailJS:", error); // Log pour débogage
-              }
-            );
-        });
-
-        // Validation visuelle des champs du formulaire
-        const formInputs = contactForm.querySelectorAll("input, textarea");
-        formInputs.forEach((input) => {
-          input.addEventListener("input", () => {
-            input.classList.toggle("border-green-500", input.checkValidity()); // Bordure verte si valide
-            input.classList.toggle("border-red-500", !input.checkValidity()); // Bordure rouge si invalide
-          });
-        });
-      }
-
-      // Gestion du carrousel des témoignages avec défilement automatique
-      const carousel = document.querySelector(".carousel"); // Conteneur du carrousel
-      const prevBtn = document.querySelector(".carousel-prev"); // Bouton précédent
-      const nextBtn = document.querySelector(".carousel-next"); // Bouton suivant
-      if (carousel && prevBtn && nextBtn) {
-        prevBtn.addEventListener(
-          "click",
-          () =>
-            carousel.scrollBy({
-              left: -carousel.offsetWidth,
-              behavior: "smooth",
-            }) // Défilement vers la gauche
-        );
-        nextBtn.addEventListener(
-          "click",
-          () =>
-            carousel.scrollBy({
-              left: carousel.offsetWidth,
-              behavior: "smooth",
-            }) // Défilement vers la droite
-        );
-        setInterval(() => nextBtn.click(), 5000); // Défilement automatique toutes les 5 secondes
-      }
-    </script>
-  </body>
 </html>
